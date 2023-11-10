@@ -16,10 +16,10 @@ function Tile(props) {
             <div className="tile-hover">
                 <h1>{props.title}</h1>
                 <p>{props.describe}</p>
-                <ul>
+                <ul className='technos'>
                     {technos}
                 </ul>
-                <ul>
+                <ul className='links'>
                     {links}
                 </ul>
             </div>
@@ -38,11 +38,11 @@ function ProjectsBlock() {
             links: [
                 {
                     name: "Github",
-                    url: "www.github.com"
+                    url: "https://www.github.com"
                 },
                 {
                     name: "Website",
-                    url: "www.keroguic.fr"
+                    url: "https://www.keroguic.fr"
                 }
             ],
             image: '/projects_images/project_keroguic.png',
@@ -57,11 +57,11 @@ function ProjectsBlock() {
             links: [
                 {
                     name: "Github",
-                    url: "www.github.com"
+                    url: "https://www.github.com"
                 },
                 {
                     name: "Website",
-                    url: "www.keroguic.fr"
+                    url: "https://www.keroguic.fr"
                 }
             ],
             image: "/projects_images/project_pc.png",
@@ -76,11 +76,11 @@ function ProjectsBlock() {
             links: [
                 {
                     name: "Github",
-                    url: "www.github.com"
+                    url: "https://www.github.com"
                 },
                 {
                     name: "Website",
-                    url: "www.keroguic.fr"
+                    url: "https://www.keroguic.fr"
                 }
             ],
             image: "/projects_images/project_pc.png",
@@ -95,11 +95,11 @@ function ProjectsBlock() {
             links: [
                 {
                     name: "Github",
-                    url: "www.github.com"
+                    url: "https://www.github.com"
                 },
                 {
                     name: "Website",
-                    url: "www.keroguic.fr"
+                    url: "https://www.keroguic.fr"
                 }
             ],
             image: "/projects_images/project_keroguic.png",

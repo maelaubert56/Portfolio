@@ -25,9 +25,7 @@ header ul{
 }
 
 header ul li{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    transition:0.2s ease-in-out;
 }
 
 header ul li a{
@@ -36,11 +34,24 @@ header ul li a{
     font-size: 18px;
     padding: 8px 20px;
     border: 2px solid #1F1717;
-    border-radius: 9999px
+    border-radius: 9999px;
+}
+
+header ul li:nth-child(1):hover, header ul li:nth-child(2):hover{
+    transform:scale(1.05);
+    transition: 0.2s ease-in-out;
 }
 
 header ul li:last-child a{
     color: #42B0D3;
     font-weight: bold;
     border: 3px solid #42B0D3;
+    transition: 0.2s ease-in-out;
+}
+
+header ul li:last-child a:hover{
+    transform:scale(1);
+    background: #42B0D3;
+    color: #FFF9F2;
+    transition: 0.2s ease-in-out;
 }
