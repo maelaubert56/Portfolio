@@ -21,7 +21,7 @@ function StudiesAndExperiencesBlock() {
             alt: "intm"
         },
         {
-            name: "APU",
+            name: "Asia Pacific University",
             date: "sept. 2023 - dec. 2023",
             description: "Exchange (one semester) in Kuala Lumpur, Malaysia",
             image: "/compagnies_logo/apu.png",
@@ -36,7 +36,7 @@ function StudiesAndExperiencesBlock() {
                 <img src={timeline} alt="timeline" />
 
                 {list.map((item,index) => (
-                    <div key={index}>
+                    <div key={index} className='logo'>
                         <div>
                             <div>
                                 <img src={item.image} alt={item.alt} />
@@ -46,9 +46,9 @@ function StudiesAndExperiencesBlock() {
                 ))}
 
                 {list.map((item,index) => (
-                    <div key={index}>
-                        <div><h3>{item.name}</h3></div>
-                        <p>{item.date}</p>
+                    <div key={index} className='description'>
+                        <h3>{item.name}</h3>
+                        <span>{item.date}</span>
                         <p>{item.description}</p>
                     </div>
                 ))}

@@ -11,7 +11,7 @@ function Tile(props) {
 
     return (
         // indicate if the id is pair or impair in the class name
-        <div className={"tile " + (props.id % 2 === 0 ? "tile_pair" : "tile_impair")}>
+        <div className={"tile " + (props.type === 0 ? "tile_0" : "tile_1")}>
             <img src={props.image} alt={props.alt} />
             <div className="tile-hover">
                 <h1>{props.title}</h1>
@@ -28,10 +28,10 @@ function Tile(props) {
 }
 
 function ProjectsBlock() {
-
     const projects = [
         {
             id: 1,
+            type: 0,
             title: "Kéroguic",
             describe: "A website for a local business",
             techs: ["React", "NodeJS", "MongoDB"],
@@ -45,11 +45,12 @@ function ProjectsBlock() {
                     url: "www.keroguic.fr"
                 }
             ],
-            image: "https://via.placeholder.com/150",
+            image: '/projects_images/project_keroguic.png',
             alt: "placeholder"
         },
         {
             id: 2,
+            type: 1,
             title: "Kéroguic",
             describe: "A website for a local business",
             techs: ["React", "NodeJS", "MongoDB"],
@@ -63,11 +64,12 @@ function ProjectsBlock() {
                     url: "www.keroguic.fr"
                 }
             ],
-            image: "https://via.placeholder.com/150",
+            image: "/projects_images/project_pc.png",
             alt: "placeholder"
         },
         {
             id: 3,
+            type: 1,
             title: "Kéroguic",
             describe: "A website for a local business",
             techs: ["React", "NodeJS", "MongoDB"],
@@ -81,11 +83,12 @@ function ProjectsBlock() {
                     url: "www.keroguic.fr"
                 }
             ],
-            image: "https://via.placeholder.com/150",
+            image: "/projects_images/project_pc.png",
             alt: "placeholder"
         },
         {
             id: 4,
+            type: 0,
             title: "Kéroguic",
             describe: "A website for a local business",
             techs: ["React", "NodeJS", "MongoDB"],
@@ -99,29 +102,34 @@ function ProjectsBlock() {
                     url: "www.keroguic.fr"
                 }
             ],
-            image: "https://via.placeholder.com/150",
+            image: "/projects_images/project_keroguic.png",
             alt: "placeholder"
         }
     ];
     return (
         <div id="ProjectsBlock">
-            <h2>Some of my projects 🧑‍💻</h2>
-            <div>
-                <div>
-                    {projects.map((project) => {
-                        return <Tile
-                            key={project.id}
-                            id={project.id}
-                            title={project.title}
-                            describe={project.describe}
-                            techs={project.techs}
-                            links={project.links}
-                            image={project.image}
-                            alt={project.alt}
-                        />;
-                    })}
+            <div className='banner top-banner'></div>
+            <div className='banner bottom-banner'></div>
+            <div className='content'>
+                <h2>Some of my projects 🧑‍💻</h2>
+                <div className='projectsContainer'>
+                    <div>
+                        {projects.map((project) => {
+                            return <Tile
+                                key={project.id}
+                                id={project.id}
+                                type={project.type}
+                                title={project.title}
+                                describe={project.describe}
+                                techs={project.techs}
+                                links={project.links}
+                                image={project.image}
+                                alt={project.alt}
+                            />;
+                        })}
+                    </div>
+                    <a href="#">More Projects →</a>
                 </div>
-                <div><h2>More Projects →</h2></div>
             </div>
         </div>
     );

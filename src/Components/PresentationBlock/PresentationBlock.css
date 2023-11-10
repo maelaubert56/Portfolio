@@ -1,0 +1,25 @@
+#PresentationBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #42B0D3;
+    padding: 100px 30%;
+    margin: 0;
+    gap: 20px;
+}
+
+#PresentationBlock h2{
+    color: #FFF9F2;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+#PresentationBlock p{
+    color: #FFF9F2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

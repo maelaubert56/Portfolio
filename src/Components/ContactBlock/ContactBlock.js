@@ -7,9 +7,9 @@ function ContactBlock() {
                 <h2>Let's talk together !</h2>
                 <p>I’m currently student at Efrei Paris Engineering School, there i have to talk about me and other things like what I like and stuffs, blabla. Some more text there with another sentence.</p>
                 <div>
-                    <img src="/tiles/linkedin.png" alt="linkedin"/>
-                    <img src="/tiles/github.png" alt="github"/>
-                    <img src="/tiles/email.png" alt="email"/>
+                    <a href="#"><img src="/tiles/linkedin.png" alt="linkedin"/></a>
+                    <a href="#"><img src="/tiles/github.png" alt="github"/></a>
+                    <a href="#"><img src="/tiles/email.png" alt="email"/></a>
                 </div>
             </div>
             <div className="right">
