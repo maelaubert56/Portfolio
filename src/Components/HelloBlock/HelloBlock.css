@@ -1,0 +1,60 @@
+#HelloBlock{
+    width:100%;
+    margin-top: 50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    gap: 50px;
+}
+
+#HelloBlock>div{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+#HelloBlock>div>div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+#HelloBlock h1{
+    color: #42B0D3;
+    position:relative;
+    margin: 10px 0;
+}
+
+
+#HelloBlock h1::after {
+    content: "";
+    position: absolute;
+    background-color: #fed4b6;
+    -webkit-box-shadow: 0 0 8px #EAC0A2;
+    box-shadow: 0 0 8px #EAC0A2;
+    height: 20px;
+    left: 12px;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#HelloBlock h2{
+    color: #747474;
+}
+
+#HelloBlock .profile_picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#HelloBlock>img{
+    max-width:40%;
+}

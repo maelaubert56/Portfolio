@@ -3,8 +3,8 @@ import './PresentationBlock.css'
 function PresentationBlock() {
     return (
         <div id="PresentationBlock">
-            <h2>Hello ! I’m Maël 👋</h2>
-            <p>Software engineer, Student at Efrei Paris</p>
+            <h2>Hi, I’m Maël. Nice to meet you.</h2>
+            <p>I’m currently student at Efrei Paris Engineering School, there i have to talk about me and other things like what I like and stuffs, blabla. Some more text there with another sentence.</p>
         </div>
     );
 }

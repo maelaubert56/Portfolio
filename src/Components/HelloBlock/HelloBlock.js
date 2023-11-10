@@ -7,10 +7,10 @@ function HelloBlock() {
         <div id="HelloBlock">
             <div>
                 <div>
-                    <h1>Hello ! I’m Maël 👋</h1>
+                    <h1>Hello ! <span>I’m Maël 👋</span></h1>
                     <h2>Software engineer, Student at Efrei Paris</h2>
                 </div>
-                <img src={profile_picture} alt=""/>
+                <img className="profile_picture" src={profile_picture} alt=""/>
             </div>
             <img src={device_image} alt="deviceImage" />
         </div>
