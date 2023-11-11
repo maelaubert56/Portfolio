@@ -32,28 +32,28 @@ function ProjectsBlock() {
         {
             id: 1,
             type: 0,
-            title: "Kéroguic",
-            describe: "A website for a local business",
+            title: "Taromaster",
+            describe: "A Tarot point counter app with synchronized games to play with friends and compare your scores",
             techs: ["React", "NodeJS", "MongoDB"],
             links: [
                 {
                     name: "Github",
-                    url: "https://www.github.com"
+                    url: "https://github.com/maelaubert56/taromaster"
                 },
                 {
                     name: "Website",
-                    url: "https://www.keroguic.fr"
+                    url: "https://taromaster.matteobonnet.fr/"
                 }
             ],
-            image: '/projects_images/project_keroguic.png',
+            image: '/projects_images/taromaster_phone.png',
             alt: "placeholder"
         },
         {
             id: 2,
             type: 1,
-            title: "Kéroguic",
-            describe: "A website for a local business",
-            techs: ["React", "NodeJS", "MongoDB"],
+            title: "TerraQuiz",
+            describe: "A website for geography quizzes",
+            techs: ["VueJs", "NodeJS", "MySQL"],
             links: [
                 {
                     name: "Github",
@@ -61,10 +61,10 @@ function ProjectsBlock() {
                 },
                 {
                     name: "Website",
-                    url: "https://www.keroguic.fr"
+                    url: "#"
                 }
             ],
-            image: "/projects_images/project_pc.png",
+            image: "/projects_images/project_terraquiz_pc.png",
             alt: "placeholder"
         },
         {
@@ -83,7 +83,7 @@ function ProjectsBlock() {
                     url: "https://www.keroguic.fr"
                 }
             ],
-            image: "/projects_images/project_pc.png",
+            image: "/projects_images/project_keroguic_pc.png",
             alt: "placeholder"
         },
         {
@@ -102,7 +102,7 @@ function ProjectsBlock() {
                     url: "https://www.keroguic.fr"
                 }
             ],
-            image: "/projects_images/project_keroguic.png",
+            image: "/projects_images/project_keroguic_phone.png",
             alt: "placeholder"
         }
     ];

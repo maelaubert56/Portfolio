@@ -9,7 +9,7 @@ function StudiesAndExperiencesBlock() {
         {
             name: "Efrei Paris",
             date: "2021 - 2026",
-            description: "Master of Engineering in Software Engineering",
+            description: "Thirst year of a Engineering Degree in IT",
             image:  "/compagnies_logo/efrei.png",
             alt: "efrei"
         },
