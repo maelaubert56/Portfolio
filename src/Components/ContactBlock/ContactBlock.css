@@ -103,6 +103,5 @@
 #ContactBlock .right form button:hover{
 
     background: #42a0d3;
-    text-decoration: underline #FFF9F2;
     transition: 0.1s ease-in-out;
 }

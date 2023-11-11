@@ -128,7 +128,7 @@ function ProjectsBlock() {
                             />;
                         })}
                     </div>
-                    <a href="#">More Projects →</a>
+                    <a href="#">More Projects <span>→</span></a>
                 </div>
             </div>
         </div>

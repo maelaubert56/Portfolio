@@ -157,10 +157,36 @@
     text-decoration: none;
     text-align: center;
     font-weight: 600;
+    background: linear-gradient(to right, #FFEFE4 50%, #FFF9F2 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
 }
 
+/*move the span from left to right then to left again infinite loop when hover*/
+
+@keyframes moveRightLeft {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px); /* Adjust the distance of movement */
+    }
+}
+
+/* Apply the animation to the span inside the anchor on hover */
+#ProjectsBlock .projectsContainer>a>span{
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+#ProjectsBlock .projectsContainer>a:hover span{
+    animation: moveRightLeft .75s infinite;
+}
+
+
 #ProjectsBlock .projectsContainer>a:hover{
-    /* TODO transition from left to right color*/
+    background-position: left bottom;
 }
 
 

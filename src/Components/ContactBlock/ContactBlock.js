@@ -13,10 +13,10 @@ function ContactBlock() {
                 </div>
             </div>
             <div className="right">
-                <form>
-                    <input type="text" placeholder="Name..." />
-                    <input type="text" placeholder="Email..." />
-                    <textarea placeholder="Message..."></textarea>
+                <form action="#">
+                    <input type="text" placeholder="Name..." required />
+                    <input type="email" placeholder="Email..." required />
+                    <textarea placeholder="Message..." required></textarea>
                     <button>Send message</button>
                 </form>
             </div>
