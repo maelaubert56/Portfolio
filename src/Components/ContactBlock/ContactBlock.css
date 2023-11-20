@@ -141,3 +141,20 @@ body.dark #ContactBlock .left img{
     border: 1px solid #FFF9F2;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 768px){
+    #ContactBlock{
+        flex-direction: column;
+        padding: 50px 0 50px 0;
+        gap: 50px;
+    }
+
+    #ContactBlock .left, #ContactBlock .right{
+        width: 80%;
+        padding: 0;
+    }
+
+    #ContactBlock .right form{
+        width: 100%;
+    }
+}

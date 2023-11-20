@@ -123,3 +123,27 @@ body.dark #StudiesAndExperiencesBlock .logo{
     color: #FFF9F2;
     text-align: center;
 }
+
+@media screen and (max-width: 1024px){
+    #StudiesAndExperiencesBlock{
+        padding: 50px  0  50px 0 ;
+    }
+    #StudiesAndExperiencesBlock>div{
+        width:40%;
+    }
+    #StudiesAndExperiencesBlock .logo{
+        width:60%;
+    }
+    #StudiesAndExperiencesBlock .description{
+        width:90%;
+    }
+    #StudiesAndExperiencesBlock .description h3{
+        font-size: 1rem;
+    }
+    #StudiesAndExperiencesBlock .description span{
+        font-size: 0.8rem;
+    }
+    #StudiesAndExperiencesBlock .description p{
+        font-size: 0.8rem;
+    }
+}

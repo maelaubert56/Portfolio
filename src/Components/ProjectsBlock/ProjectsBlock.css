@@ -198,15 +198,8 @@ body.dark #ProjectsBlock .projectsContainer>a{
     background-position: right bottom;
     transition: all .5s ease-out;
 }
-/*
-body.dark #ProjectsBlock .projectsContainer>a{
-    background-color: #1F1717;
-    background: linear-gradient(to right, #DA868F 50%, #1F1717 50%);
-    color: #FFF9F2;
-}*/
 
 /*move the span from left to right then to left again infinite loop when hover*/
-
 @keyframes moveRightLeft {
     0%, 100% {
         transform: translateX(0px);
@@ -249,5 +242,20 @@ body.dark #ProjectsBlock .projectsContainer>a:hover{
         width: 100%;
         height: 30vh;
     }
-}
 
+    #ProjectsBlock .projectsContainer>div>div:nth-child(even){
+        background: #E0F8FF;
+    }
+
+    body.dark #ProjectsBlock .projectsContainer>div>div:nth-child(even){
+        background: #8BD1E7;
+    }
+
+    #ProjectsBlock .projectsContainer>div>div:nth-child(odd){
+        background: #FFEFE4;
+    }
+
+    body.dark #ProjectsBlock .projectsContainer>div>div:nth-child(odd){
+        background: #DA868F;
+    }
+}
