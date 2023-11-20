@@ -1,15 +1,18 @@
 import './TechnosBlock.css'
+import {useTranslation} from "react-i18next";
 
-function TechnosBlock() {
+function TechnosBlock({ref}) {
+    const { t, i18n } = useTranslation()
+
     return (
-        <div id="TechnosBlock">
+        <div id="TechnosBlock" ref={ref}>
 
             <div className='banner'></div>
             <div className='content'>
-                <h2>Technologies I use ⚙️</h2>
+                <h2>{t('Technos_Title')}</h2>
                 <div>
                     <div className='techos_subpart'>
-                        <p>Front-End Developement</p>
+                        <p>{t('Technos_Front')}</p>
                         <div>
                             <div>
                                 <img src="/technos_logo/html5.png" alt="html5"/>
@@ -21,7 +24,7 @@ function TechnosBlock() {
                         </div>
                     </div>
                     <div className='techos_subpart'>
-                        <p>Back-End Developement</p>
+                        <p>{t('Technos_Back')}</p>
                         <div>
                             <img src="/technos_logo/nodejs.png" alt="nodejs"/>
                             <img src="/technos_logo/expressjs.png" alt="expressjs"/>
@@ -29,7 +32,7 @@ function TechnosBlock() {
                         </div>
                     </div>
                     <div className='techos_subpart'>
-                        <p>Other</p>
+                        <p>{t('Technos_Others')}</p>
                         <div>
                             <img src="/technos_logo/git.png" alt="git"/>
                             <img src="/technos_logo/github.svg" alt="github"/>

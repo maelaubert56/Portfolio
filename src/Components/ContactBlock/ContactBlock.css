@@ -7,6 +7,10 @@
     align-items: center;
 }
 
+body.dark #ContactBlock{
+    background: #1F1717;
+}
+
 #ContactBlock .left{
     width: 50%;
     display: flex;
@@ -21,6 +25,10 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: #1F1717;
+}
+
+body.dark #ContactBlock .left h2 {
+    color: #FFF9F2;
 }
 
 #ContactBlock .left div{
@@ -41,6 +49,10 @@
     font-weight: 400;
     color: #1F1717;
     text-align: center;
+}
+
+body.dark #ContactBlock .left p {
+    color: #FFF9F2;
 }
 
 #ContactBlock .right{
@@ -72,6 +84,12 @@
     font-weight: 400;
 }
 
+body.dark #ContactBlock .right form input{
+    background: #1F1717;
+    color: #FFF9F2;
+    border: 1.5px solid #FFF9F2;
+}
+
 #ContactBlock .right form textarea{
     font-family: 'Inter', sans-serif;
     width: 100%;
@@ -86,6 +104,12 @@
     resize: none;
 }
 
+body.dark #ContactBlock .right form textarea{
+    background: #1F1717;
+    color: #FFF9F2;
+    border: 1.5px solid #FFF9F2;
+}
+
 #ContactBlock .right form button{
     width: 100%;
     height: 40px;
@@ -97,11 +121,23 @@
     font-weight: 400;
     cursor: pointer;
     transition: 0.1s ease-in-out;
+}
 
+body.dark #ContactBlock .right form button {
+    background: #CE5A67;
 }
 
 #ContactBlock .right form button:hover{
 
     background: #42a0d3;
     transition: 0.1s ease-in-out;
+}
+
+body.dark #ContactBlock .right form button:hover {
+    background: #ef4a5f;
+}
+
+body.dark #ContactBlock .left img{
+    border: 1px solid #FFF9F2;
+    border-radius: 5px;
 }

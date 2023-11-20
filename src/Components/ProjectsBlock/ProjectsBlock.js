@@ -1,7 +1,7 @@
 import './ProjectsBlock.css'
+import {useTranslation} from "react-i18next";
 
 function Tile(props) {
-    console.log(props)
     const technos = props.techs.map((tech) => {
         return <li key={tech}>{tech}</li>;
     });
@@ -28,32 +28,34 @@ function Tile(props) {
 }
 
 function ProjectsBlock() {
+    const { t, i18n } = useTranslation()
+
     const projects = [
         {
             id: 1,
             type: 0,
-            title: "Kéroguic",
-            describe: "A website for a local business",
+            title: "Taromaster",
+            describe: "A Tarot point counter app with synchronized games to play with friends and compare your scores",
             techs: ["React", "NodeJS", "MongoDB"],
             links: [
                 {
                     name: "Github",
-                    url: "https://www.github.com"
+                    url: "https://github.com/maelaubert56/taromaster"
                 },
                 {
                     name: "Website",
-                    url: "https://www.keroguic.fr"
+                    url: "https://taromaster.matteobonnet.fr/"
                 }
             ],
-            image: '/projects_images/project_keroguic.png',
+            image: '/projects_images/taromaster_phone.png',
             alt: "placeholder"
         },
         {
             id: 2,
             type: 1,
-            title: "Kéroguic",
-            describe: "A website for a local business",
-            techs: ["React", "NodeJS", "MongoDB"],
+            title: "TerraQuiz",
+            describe: "A website for geography quizzes",
+            techs: ["VueJs", "NodeJS", "MySQL"],
             links: [
                 {
                     name: "Github",
@@ -61,10 +63,10 @@ function ProjectsBlock() {
                 },
                 {
                     name: "Website",
-                    url: "https://www.keroguic.fr"
+                    url: "#"
                 }
             ],
-            image: "/projects_images/project_pc.png",
+            image: "/projects_images/project_terraquiz_pc.png",
             alt: "placeholder"
         },
         {
@@ -83,7 +85,7 @@ function ProjectsBlock() {
                     url: "https://www.keroguic.fr"
                 }
             ],
-            image: "/projects_images/project_pc.png",
+            image: "/projects_images/project_keroguic_pc.png",
             alt: "placeholder"
         },
         {
@@ -102,7 +104,7 @@ function ProjectsBlock() {
                     url: "https://www.keroguic.fr"
                 }
             ],
-            image: "/projects_images/project_keroguic.png",
+            image: "/projects_images/project_keroguic_phone.png",
             alt: "placeholder"
         }
     ];
@@ -111,7 +113,7 @@ function ProjectsBlock() {
             <div className='banner top-banner'></div>
             <div className='banner bottom-banner'></div>
             <div className='content'>
-                <h2>Some of my projects 🧑‍💻</h2>
+                <h2>{t('Projects_Title')}</h2>
                 <div className='projectsContainer'>
                     <div>
                         {projects.map((project) => {
@@ -128,7 +130,7 @@ function ProjectsBlock() {
                             />;
                         })}
                     </div>
-                    <a href="#">More Projects <span>→</span></a>
+                    <a href="#">{t('Projects_More')}<span>→</span></a>
                 </div>
             </div>
         </div>

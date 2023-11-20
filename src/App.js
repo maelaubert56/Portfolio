@@ -1,4 +1,5 @@
 import './App.css';
+import {useState, useEffect} from "react";
 
 import Header from './Components/Header/Header';
 import HelloBlock from './Components/HelloBlock/HelloBlock';
@@ -11,11 +12,18 @@ import Footer from './Components/Footer/Footer';
 
 
 function App() {
-  return (
+    const [theme, setTheme] = useState("light");
+
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
+
+
+    return (
     <div id="App">
-        <Header />
+        <Header theme={theme} setTheme={setTheme}/>
         <div>
-            <HelloBlock />
+            <HelloBlock theme={theme}/>
             <PresentationBlock />
             <ProjectsBlock />
             <StudiesAndExperiencesBlock />

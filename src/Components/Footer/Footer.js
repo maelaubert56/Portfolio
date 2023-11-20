@@ -1,11 +1,14 @@
 import './Footer.css'
+import {useTranslation} from "react-i18next";
 
 function Footer() {
+    const { t, i18n } = useTranslation()
+
     return (
         <footer>
             <img src="/icon_white.svg" alt="icon"/>
-            <p>Designed and Developped by me</p>
-            <p>© 2023 - Maël Aubert - All rights reserved. </p>
+            <p>{t('Footer_Text1')}</p>
+            <p>{t('Footer_Text2')}</p>
         </footer>
     );
 }
