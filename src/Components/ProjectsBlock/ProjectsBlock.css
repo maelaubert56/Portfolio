@@ -1,0 +1,253 @@
+#ProjectsBlock{
+    padding: 20px 0;
+    margin-top:0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ProjectsBlock .banner{
+    background: #42B0D3;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    transition: all 300ms ease;
+}
+
+body.dark #ProjectsBlock .banner{
+    background: #3488A2;
+}
+
+#ProjectsBlock .top-banner{
+    top: 0;
+}
+
+#ProjectsBlock .bottom-banner{
+    bottom: 0;
+}
+
+
+#ProjectsBlock .content{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 65%;
+    gap: 20px;
+}
+
+#ProjectsBlock h2{
+    color: #FFF9F2;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+#ProjectsBlock .projectsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+#ProjectsBlock .projectsContainer>div{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#ProjectsBlock .tile{
+    position:relative;
+    border-radius: 30px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+#ProjectsBlock .tile .tile-hover{
+    display:flex;
+    visibility: hidden;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: rgba(31, 23, 23, 0.8);
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFF9F2;
+    opacity:0;
+    transition: 0.2s ease-in-out;
+}
+
+
+#ProjectsBlock .tile:hover .tile-hover{
+    visibility: visible;
+    opacity:1;
+    transition: 0.2s ease-in-out;
+}
+
+#ProjectsBlock .tile-hover p{
+    text-align: center;
+    padding: 0 20px;
+}
+
+#ProjectsBlock .tile-hover ul{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+#ProjectsBlock .tile-hover .technos li{
+    padding:5px 15px;
+    background: #FFF9F2;
+    color:#747474;
+    border-radius:99999px;
+    font-size:0.8rem;
+}
+
+
+#ProjectsBlock .tile-hover .links li{
+    transition: 0.2s ease-in-out;
+}
+
+#ProjectsBlock .tile-hover .links li a{
+    border-radius:99999px;
+    padding:10px 20px;
+    background: #CE5A67;
+    font-size:1rem;
+    color:#FFF9F2;
+}
+
+
+#ProjectsBlock .tile-hover .links li:hover{
+    transform:scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+
+#ProjectsBlock .tile_1{
+    width:calc(60% - 5px);
+    background: #E0F8FF;
+}
+
+body.dark #ProjectsBlock .tile_1{
+    background: #8BD1E7;
+}
+
+#ProjectsBlock .tile_0{
+    width:calc(40% - 5px);
+    background: #FFEFE4;
+}
+
+body.dark #ProjectsBlock .tile_0{
+    background: #DA868F;
+}
+
+#ProjectsBlock .tile img{
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+#ProjectsBlock .projectsContainer>a{
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 99999px;
+    color: #1F1717;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    background: linear-gradient(to right, #FFEFE4 50%, #FFF9F2 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+body.dark #ProjectsBlock .projectsContainer>a{
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 99999px;
+    color: #1F1717;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    background: linear-gradient(to right, #DA868F 50%, #1F1717 50%);
+    color: #FFF9F2;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+/*
+body.dark #ProjectsBlock .projectsContainer>a{
+    background-color: #1F1717;
+    background: linear-gradient(to right, #DA868F 50%, #1F1717 50%);
+    color: #FFF9F2;
+}*/
+
+/*move the span from left to right then to left again infinite loop when hover*/
+
+@keyframes moveRightLeft {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px); /* Adjust the distance of movement */
+    }
+}
+
+/* Apply the animation to the span inside the anchor on hover */
+#ProjectsBlock .projectsContainer>a>span{
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+#ProjectsBlock .projectsContainer>a:hover span{
+    animation: moveRightLeft .75s infinite;
+}
+
+
+#ProjectsBlock .projectsContainer>a:hover{
+    background-position: left bottom;
+}
+
+body.dark #ProjectsBlock .projectsContainer>a:hover{
+    background-position: left bottom;
+}
+
+@media screen and (max-width: 1024px){
+    #ProjectsBlock .content{
+        width: 80%;
+    }
+
+    #ProjectsBlock .projectsContainer>div{
+        flex-direction: column;
+    }
+
+    #ProjectsBlock .tile{
+        width: 100%;
+        height: 30vh;
+    }
+}
+

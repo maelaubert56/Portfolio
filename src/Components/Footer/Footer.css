@@ -1,0 +1,23 @@
+footer{
+    background-color: #42B0D3;
+    padding: 20px  0  20px 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+body.dark footer{
+    background-color: #3488A2;
+}
+
+footer img{
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+footer p{
+    color: #FFF9F2;
+    font-weight: 400;
+}

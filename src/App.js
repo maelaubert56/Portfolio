@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState, useEffect} from "react";
+
+import Header from './Components/Header/Header';
+import HelloBlock from './Components/HelloBlock/HelloBlock';
+import PresentationBlock from './Components/PresentationBlock/PresentationBlock';
+import ProjectsBlock from './Components/ProjectsBlock/ProjectsBlock';
+import StudiesAndExperiencesBlock from './Components/StudiesAndExperiencesBlock/StudiesAndExperiencesBlock';
+import TechnosBlock from './Components/TechnosBlock/TechnosBlock';
+import ContactBlock from './Components/ContactBlock/ContactBlock';
+import Footer from './Components/Footer/Footer';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    const [theme, setTheme] = useState("light");
+
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
+
+
+    return (
+    <div id="App">
+        <Header theme={theme} setTheme={setTheme}/>
+        <div>
+            <HelloBlock theme={theme}/>
+            <PresentationBlock />
+            <ProjectsBlock />
+            <StudiesAndExperiencesBlock />
+            <TechnosBlock />
+            <ContactBlock />
+        </div>
+        <Footer />
     </div>
   );
 }
