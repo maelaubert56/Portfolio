@@ -8,6 +8,10 @@ footer{
     gap: 5px;
 }
 
+body.dark footer{
+    background-color: #3488A2;
+}
+
 footer img{
     max-height: 50px;
     margin-bottom: 10px;

@@ -8,6 +8,10 @@
     gap:100px;
 }
 
+body.dark #StudiesAndExperiencesBlock{
+    background: #3488A2;
+}
+
 #StudiesAndExperiencesBlock h2{
     color: #FFF9F2;
     font-weight: 600;
@@ -37,6 +41,10 @@
     background: #42B0D3;
     border-radius:100%;
     padding:3%;
+}
+
+body.dark #StudiesAndExperiencesBlock .logo{
+    background: #3488A2;
 }
 
 #StudiesAndExperiencesBlock .logo>div{
@@ -101,6 +109,7 @@
     padding:10px;
     border-radius:15px;
     text-align: center;
+    color:#1F1717;
 }
 
 #StudiesAndExperiencesBlock .description span{

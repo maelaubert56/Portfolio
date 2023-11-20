@@ -17,6 +17,10 @@
     height: 45%;
 }
 
+body.dark #TechnosBlock .banner{
+    background: #3488A2;
+}
+
 
 #TechnosBlock .content{
     z-index: 2;

@@ -1,11 +1,14 @@
 import './ContactBlock.css'
+import {useTranslation} from "react-i18next";
 
 function ContactBlock() {
+    const { t, i18n } = useTranslation()
+
     return (
         <div id="ContactBlock">
             <div className="left">
-                <h2>Let's talk together !</h2>
-                <p>I’m currently student at Efrei Paris Engineering School, there i have to talk about me and other things like what I like and stuffs, blabla. Some more text there with another sentence.</p>
+                <h2>{t('Contact_Title')}</h2>
+                <p>{t('Contact_Description')}</p>
                 <div>
                     <a href="#"><img src="/tiles/linkedin.png" alt="linkedin"/></a>
                     <a href="#"><img src="/tiles/github.png" alt="github"/></a>
@@ -14,10 +17,10 @@ function ContactBlock() {
             </div>
             <div className="right">
                 <form action="#">
-                    <input type="text" placeholder="Name..." required />
-                    <input type="email" placeholder="Email..." required />
-                    <textarea placeholder="Message..." required></textarea>
-                    <button>Send message</button>
+                    <input type="text" placeholder={t('Contact_Form_Name')} required />
+                    <input type="email" placeholder={t('Contact_Form_Email')} required />
+                    <textarea placeholder={t('Contact_Form_Message')} required></textarea>
+                    <button>{t('Contact_Form_Button')}</button>
                 </form>
             </div>
         </div>

@@ -1,10 +1,13 @@
 import './PresentationBlock.css'
+import {useTranslation} from "react-i18next";
 
 function PresentationBlock() {
+    const { t, i18n } = useTranslation()
+
     return (
         <div id="PresentationBlock">
-            <h2>Hi, I’m Maël. Nice to meet you.</h2>
-            <p>I’m currently student at Efrei Paris Engineering School in IT. I’m passionate about new technologies and I’m always looking for new challenges.</p>
+            <h2>{t('Presentation_Title')}</h2>
+            <p>{t('Presentation_Description')}</p>
         </div>
     );
 }

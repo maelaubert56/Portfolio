@@ -7,7 +7,7 @@ import i18n from "./langConfig";
 i18n.changeLanguage(navigator.language.split(/[-_]/)[0]);
 
 // temp, force language
-i18n.changeLanguage("de");
+i18n.changeLanguage("en");
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

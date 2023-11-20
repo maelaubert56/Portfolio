@@ -29,6 +29,11 @@
     color: #42B0D3;
     position:relative;
     margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+body.dark #HelloBlock h1{
+    color: #FCF5ED;
 }
 
 
@@ -43,11 +48,26 @@
     bottom: 0;
     width: 100%;
     z-index: -1;
+    transition: all 0.3s ease-in-out;
+
+    border-radius:5px;
+}
+
+body.dark #HelloBlock h1::after {
+    background-color: #CE5A67;
+    -webkit-box-shadow: 0 0 8px #CE5A67;
+    box-shadow: 0 0 8px 4px #CE5A67;
 }
 
 #HelloBlock h2{
     color: #747474;
+    transition: all 0.3s ease-in-out;
 }
+
+body.dark #HelloBlock h2{
+    color: #D2CBC3;
+}
+
 
 #HelloBlock .profile_picture{
     width: 200px;
@@ -57,4 +77,29 @@
 
 #HelloBlock>img{
     max-width:40%;
+}
+
+@media (max-width: 768px) {
+    #HelloBlock>div{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:30px;
+    }
+
+    #HelloBlock h1 {
+        font-size: 32px;
+    }
+
+    #HelloBlock h2 {
+        font-size: 18px;
+    }
+
+    #HelloBlock h1::after {
+        display:none;
+    }
+
+    #HelloBlock>img{
+        max-width:80%;
+    }
 }

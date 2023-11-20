@@ -1,7 +1,7 @@
 import './ProjectsBlock.css'
+import {useTranslation} from "react-i18next";
 
 function Tile(props) {
-    console.log(props)
     const technos = props.techs.map((tech) => {
         return <li key={tech}>{tech}</li>;
     });
@@ -28,6 +28,8 @@ function Tile(props) {
 }
 
 function ProjectsBlock() {
+    const { t, i18n } = useTranslation()
+
     const projects = [
         {
             id: 1,
@@ -111,7 +113,7 @@ function ProjectsBlock() {
             <div className='banner top-banner'></div>
             <div className='banner bottom-banner'></div>
             <div className='content'>
-                <h2>Some of my projects 🧑‍💻</h2>
+                <h2>{t('Projects_Title')}</h2>
                 <div className='projectsContainer'>
                     <div>
                         {projects.map((project) => {
@@ -128,7 +130,7 @@ function ProjectsBlock() {
                             />;
                         })}
                     </div>
-                    <a href="#">More Projects <span>→</span></a>
+                    <a href="#">{t('Projects_More')}<span>→</span></a>
                 </div>
             </div>
         </div>
