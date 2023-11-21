@@ -30,84 +30,388 @@ function Tile(props) {
 function ProjectsBlock() {
     const { t, i18n } = useTranslation()
 
-    const projects = [
-        {
-            id: 1,
-            type: 0,
-            title: "Taromaster",
-            describe: "A Tarot point counter app with synchronized games to play with friends and compare your scores",
-            techs: ["React", "NodeJS", "MongoDB"],
-            links: [
-                {
-                    name: "Github",
-                    url: "https://github.com/maelaubert56/taromaster"
-                },
-                {
-                    name: "Website",
-                    url: "https://taromaster.matteobonnet.fr/"
-                }
-            ],
-            image: '/projects_images/taromaster_phone.png',
-            alt: "placeholder"
-        },
-        {
-            id: 2,
-            type: 1,
-            title: "TerraQuiz",
-            describe: "A website for geography quizzes",
-            techs: ["VueJs", "NodeJS", "MySQL"],
-            links: [
-                {
-                    name: "Github",
-                    url: "https://www.github.com"
-                },
-                {
-                    name: "Website",
-                    url: "#"
-                }
-            ],
-            image: "/projects_images/project_terraquiz_pc.png",
-            alt: "placeholder"
-        },
-        {
-            id: 3,
-            type: 1,
-            title: "Kéroguic",
-            describe: "A website for a local business",
-            techs: ["React", "NodeJS", "MongoDB"],
-            links: [
-                {
-                    name: "Github",
-                    url: "https://www.github.com"
-                },
-                {
-                    name: "Website",
-                    url: "https://www.keroguic.fr"
-                }
-            ],
-            image: "/projects_images/project_keroguic_pc.png",
-            alt: "placeholder"
-        },
-        {
-            id: 4,
-            type: 0,
-            title: "Kéroguic",
-            describe: "A website for a local business",
-            techs: ["React", "NodeJS", "MongoDB"],
-            links: [
-                {
-                    name: "Github",
-                    url: "https://www.github.com"
-                },
-                {
-                    name: "Website",
-                    url: "https://www.keroguic.fr"
-                }
-            ],
-            image: "/projects_images/project_keroguic_phone.png",
-            alt: "placeholder"
-        }
-    ];
+    const projectsDatas = {
+        "en": [
+            {
+                "id": 1,
+                "type": 0,
+                "title": "Taromaster",
+                "describe": "A Tarot point counter app with synchronized games to play with friends and compare your scores",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://github.com/maelaubert56/taromaster"
+                    },
+                    {
+                        "name": "Website",
+                        "url": "https://taromaster.matteobonnet.fr/"
+                    }
+                ],
+                "image": "/projects_images/taromaster_phone.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 2,
+                "type": 1,
+                "title": "TerraQuiz",
+                "describe": "A website for geography quizzes",
+                "techs": [
+                    "VueJs",
+                    "NodeJS",
+                    "MySQL"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Website",
+                        "url": "#"
+                    }
+                ],
+                "image": "/projects_images/project_terraquiz_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 3,
+                "type": 1,
+                "title": "Kéroguic",
+                "describe": "A website for a local business",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Website",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 4,
+                "type": 0,
+                "title": "Kéroguic",
+                "describe": "A website for a local business",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Website",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_phone.png",
+                "alt": "placeholder"
+            }
+        ],
+        "fr": [
+            {
+                "id": 1,
+                "type": 0,
+                "title": "Taromaster",
+                "describe": "Une application de comptage de points de Tarot avec des parties synchronisées pour jouer avec ses amis et comparer ses scores",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://github.com/maelaubert56/taromaster"
+                    },
+                    {
+                        "name": "Site web",
+                        "url": "https://taromaster.matteobonnet.fr/"
+                    }
+                ],
+                "image": "/projects_images/taromaster_phone.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 2,
+                "type": 1,
+                "title": "TerraQuiz",
+                "describe": "Un site de quiz de géographie",
+                "techs": [
+                    "VueJs",
+                    "NodeJS",
+                    "MySQL"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Site web",
+                        "url": "#"
+                    }
+                ],
+                "image": "/projects_images/project_terraquiz_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 3,
+                "type": 1,
+                "title": "Kéroguic",
+                "describe": "Un site pour une entreprise locale",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Site web",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 4,
+                "type": 0,
+                "title": "Kéroguic",
+                "describe": "Un site pour une entreprise locale",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Site web",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_phone.png",
+                "alt": "placeholder"
+            }
+        ],
+        "ge": [
+            {
+                "id": 1,
+                "type": 0,
+                "title": "Taromaster",
+                "describe": "Eine Anwendung zum Zählen von Tarotpunkten mit synchronisierten Spielen, um mit Freunden zu spielen und Punkte zu vergleichen",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://github.com/maelaubert56/taromaster"
+                    },
+                    {
+                        "name": "Webseite",
+                        "url": "https://taromaster.matteobonnet.fr/"
+                    }
+                ],
+                "image": "/projects_images/taromaster_phone.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 2,
+                "type": 1,
+                "title": "TerraQuiz",
+                "describe": "Eine Geographie-Quiz-Website",
+                "techs": [
+                    "VueJs",
+                    "NodeJS",
+                    "MySQL"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Webseite",
+                        "url": "#"
+                    }
+                ],
+                "image": "/projects_images/project_terraquiz_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 3,
+                "type": 1,
+                "title": "Kéroguic",
+                "describe": "Eine Website für ein lokales Unternehmen",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Webseite",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 4,
+                "type": 0,
+                "title": "Kéroguic",
+                "describe": "Eine Website für ein lokales Unternehmen",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Webseite",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_phone.png",
+                "alt": "placeholder"
+            }
+        ],
+        "sp": [
+            {
+                "id": 1,
+                "type": 0,
+                "title": "Taromaster",
+                "describe": "Una aplicación para contar puntos de tarot con juegos sincronizados para jugar con amigos y comparar puntos",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://github.com/maelaubert56/taromaster"
+                    },
+                    {
+                        "name": "Sitio web",
+                        "url": "https://taromaster.matteobonnet.fr/"
+                    }
+                ],
+                "image": "/projects_images/taromaster_phone.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 2,
+                "type": 1,
+                "title": "TerraQuiz",
+                "describe": "Un sitio de preguntas de geografía",
+                "techs": [
+                    "VueJs",
+                    "NodeJS",
+                    "MySQL"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Sitio web",
+                        "url": "#"
+                    }
+                ],
+                "image": "/projects_images/project_terraquiz_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 3,
+                "type": 1,
+                "title": "Kéroguic",
+                "describe": "Un sitio para una empresa local",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Sitio web",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_pc.png",
+                "alt": "placeholder"
+            },
+            {
+                "id": 4,
+                "type": 0,
+                "title": "Kéroguic",
+                "describe": "Un sitio para una empresa local",
+                "techs": [
+                    "React",
+                    "NodeJS",
+                    "MongoDB"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://www.github.com"
+                    },
+                    {
+                        "name": "Sitio web",
+                        "url": "https://www.keroguic.fr"
+                    }
+                ],
+                "image": "/projects_images/project_keroguic_phone.png",
+                "alt": "placeholder"
+            }
+        ]
+    }
+
+    const projects = projectsDatas[i18n.language];
+    console.log(projects)
+
     return (
         <div id="ProjectsBlock">
             <div className='banner top-banner'></div>
