@@ -110,7 +110,7 @@ body.dark #ContactBlock .right form textarea{
     border: 1.5px solid #FFF9F2;
 }
 
-#ContactBlock .right form button{
+#ContactBlock .right form input[type="submit"]{
     width: 100%;
     height: 40px;
     border: none;
@@ -123,17 +123,17 @@ body.dark #ContactBlock .right form textarea{
     transition: 0.1s ease-in-out;
 }
 
-body.dark #ContactBlock .right form button {
+body.dark #ContactBlock .right form input[type="submit"]{
     background: #CE5A67;
 }
 
-#ContactBlock .right form button:hover{
+#ContactBlock .right form input[type="submit"]:hover{
 
     background: #42a0d3;
     transition: 0.1s ease-in-out;
 }
 
-body.dark #ContactBlock .right form button:hover {
+body.dark #ContactBlock .right form input[type="submit"]:hover {
     background: #ef4a5f;
 }
 
