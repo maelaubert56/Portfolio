@@ -1,15 +1,15 @@
-import './PresentationBlock.css'
-import {useTranslation} from "react-i18next";
+import "./PresentationBlock.css";
+import { useTranslation } from "react-i18next";
 
 function PresentationBlock() {
-    const { t, i18n } = useTranslation()
+  const { t } = useTranslation();
 
-    return (
-        <div id="PresentationBlock">
-            <h2>{t('Presentation_Title')}</h2>
-            <p>{t('Presentation_Description')}</p>
-        </div>
-    );
+  return (
+    <div id="PresentationBlock">
+      <h2>{t("Presentation_Title")}</h2>
+      <p>{t("Presentation_Description")}</p>
+    </div>
+  );
 }
 
 export default PresentationBlock;
