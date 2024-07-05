@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 
 function ChangeLanguage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const languages = [
     { code: "en", name: "English" },
