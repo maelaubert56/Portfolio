@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+<h1 align="center">Hi 👋, I'm Maël !</h1>
+<h3 align="center">Student at EFREI Paris, Front-end Engineering Intern at Ekino, and Partnerships Manager at BDS Efrei.</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+- 🔭 I’m currently working at **Ekino** as a **Front-end Engineering Intern**.
 
-In the project directory, you can run:
+- 🌱 I’m continuously learning and improving my skills in **React, Next.js, TypeScript, and Node.js**.
 
-### `npm start`
+- 👨‍💻 All of my projects are available on [my GitHub](https://github.com/maelaubert56) and [my portfolio](http://www.maelaubert.fr).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎸 I play guitar in a band called **SoulBrothers**. Check out our music on [YouTube](https://www.youtube.com/@SoulBrothers777).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ⚡ Fun fact: **I combine my passion for sports and coding through my involvement with BDS Efrei!**
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3 align="center">Connect with me:</h3>
 
-### `npm run build`
+<p align="center">
+  <a href="mailto:mael.aubert@efrei.net"><img src="https://img.icons8.com/color/48/000000/gmail--v1.png" alt="Email" height="30"/></a>
+  <a href="https://linkedin.com/in/mael-aubert" target="blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" height="30"/></a>
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3 align="center">Languages and Tools:</h3>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+  <!-- Tech Stack Badges -->
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" style="margin: 10px;"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" style="margin: 10px;"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" style="margin: 10px;"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" style="margin: 10px;"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" style="margin: 10px;"/>
+</p>
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=maelaubert56&show_icons=true&locale=en&layout=compact&theme=radical" alt="maelaubert56 Top Languages" />
+</p>
