@@ -1,5 +1,5 @@
 import "./StudiesAndExperiencesBlock.css";
-import timeline from "../../assets/timeline.svg";
+import timeline from "../../assets/timeline_long.svg";
 import { useTranslation } from "react-i18next";
 
 function StudiesAndExperiencesBlock() {
@@ -8,29 +8,28 @@ function StudiesAndExperiencesBlock() {
       en: {
         name: "Efrei Paris",
         date: "2021 - 2026",
-        description: "Thirst year of a Engineering Degree in IT",
+        description: "Fourth year of an Engineering Degree in IT",
         image: "/compagnies_logo/efrei.png",
         alt: "efrei",
       },
       fr: {
         name: "Efrei Paris",
         date: "2021 - 2026",
-        description:
-          "Troisième année de d'un cursus d'ingénieur en informatique",
+        description: "Quatrième année d'un cursus d'ingénieur en informatique",
         image: "/compagnies_logo/efrei.png",
         alt: "efrei",
       },
       es: {
         name: "Efrei Paris",
         date: "2021 - 2026",
-        description: "Thirst year of a Engineering Degree in IT",
+        description: "Cuarto año de Ingeniería en Informática",
         image: "/compagnies_logo/efrei.png",
         alt: "efrei",
       },
       ge: {
         name: "Efrei Paris",
         date: "2021 - 2026",
-        description: "Thirst year of a Engineering Degree in IT",
+        description: "Viertes Jahr des Informatik-Ingenieurstudiums",
         image: "/compagnies_logo/efrei.png",
         alt: "efrei",
       },
@@ -55,16 +54,14 @@ function StudiesAndExperiencesBlock() {
       es: {
         name: "INTM Groupe",
         date: "jan. 2023 - jun. 2023",
-        description:
-          "Part-Time as Business Developer after an internship of one month",
+        description: "Tiempo parcial como Business Developer después de una práctica de un mes",
         image: "/compagnies_logo/intm.png",
         alt: "intm",
       },
       ge: {
-        name: "INTM Groupe",
-        date: "jan. 2023 - jun. 2023",
-        description:
-          "Part-Time as Business Developer after an internship of one month",
+        name: "INTM Gruppe",
+        date: "Jan. 2023 - Jun. 2023",
+        description: "Teilzeit als Business Developer nach einem einmonatigen Praktikum",
         image: "/compagnies_logo/intm.png",
         alt: "intm",
       },
@@ -86,19 +83,50 @@ function StudiesAndExperiencesBlock() {
       },
       es: {
         name: "Asia Pacific University",
-        date: "sept. 2023 - dec. 2023",
-        description: "Exchange (one semester) in Kuala Lumpur, Malaysia",
+        date: "sept. 2023 - dic. 2023",
+        description: "Intercambio (un semestre) en Kuala Lumpur, Malasia",
         image: "/compagnies_logo/apu.png",
         alt: "APU",
       },
       ge: {
         name: "Asia Pacific University",
-        date: "sept. 2023 - dec. 2023",
-        description: "Exchange (one semester) in Kuala Lumpur, Malaysia",
+        date: "Sept. 2023 - Dez. 2023",
+        description: "Austauschsemester in Kuala Lumpur, Malaysia",
         image: "/compagnies_logo/apu.png",
         alt: "APU",
       },
     },
+    {
+      en: {
+        name: "Ekino",
+        date: "sept. 2024 - now",
+        description: "Full-Time as Front-End Engineer Apprentice",
+        image: "/compagnies_logo/ekino.png",
+        alt: "ekino",
+      },
+      fr: {
+        name: "Ekino",
+        date: "sept. 2024 - maintenant",
+        description: "Temps plein en tant qu'apprenti ingénieur Front-End",
+        image: "/compagnies_logo/ekino.png",
+        alt: "ekino",
+      },
+      es: {
+        name: "Ekino",
+        date: "sept. 2024 - ahora",
+        description: "Tiempo completo como Ingeniero Front-End en prácticas",
+        image: "/compagnies_logo/ekino.png",
+        alt: "ekino",
+      },
+      ge: {
+        name: "Ekino",
+        date: "Sept. 2024 - jetzt",
+        description: "Vollzeit als Front-End Ingenieur Auszubildender",
+        image: "/compagnies_logo/ekino.png",
+        alt: "ekino",
+      },
+
+    }
   ];
   const { t } = useTranslation();
 

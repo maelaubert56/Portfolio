@@ -18,7 +18,9 @@ function TechnosBlock({ ref }) {
                 <img src="/technos_logo/css3.png" alt="css3" />
                 <img src="/technos_logo/js.png" alt="js" />
               </div>
-              <img src="/technos_logo/reactjs.png" alt="react" />
+              <div>
+                <img src="/technos_logo/reactjs.png" alt="react" />
+                <img src="/technos_logo/nextjs.png" alt="next" /></div>
               <img src="/technos_logo/vuejs.png" alt="vue" />
             </div>
           </div>
@@ -27,14 +29,23 @@ function TechnosBlock({ ref }) {
             <div>
               <img src="/technos_logo/nodejs.png" alt="nodejs" />
               <img src="/technos_logo/expressjs.png" alt="expressjs" />
-              <img src="/technos_logo/mysql.svg" alt="mysql" />
+              <img src="/technos_logo/prisma.svg" alt="prisma" />
+              <div>
+                <img src="/technos_logo/mysql.svg" alt="mysql" />
+                <img src="/technos_logo/postgres.png" alt="postgres" />
+              </div>
             </div>
           </div>
           <div className="techos_subpart">
             <p>{t("Technos_Others")}</p>
             <div>
-              <img src="/technos_logo/git.png" alt="git" />
-              <img src="/technos_logo/github.svg" alt="github" />
+              <div><img src="/technos_logo/git.png" alt="git" />
+                <img src="/technos_logo/github.png" alt="github" />
+                <img src="/technos_logo/gitlab.png" alt="gitlab" />
+              </div>
+
+              <img src="/technos_logo/ts.png" alt="ts" />
+              <img src="/technos_logo/docker.png" alt="docker" />
               <img src="/technos_logo/figma.png" alt="figma" />
             </div>
           </div>
