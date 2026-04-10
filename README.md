@@ -1,42 +1,36 @@
-<h1 align="center">Hi 👋, I'm Maël !</h1>
-<h3 align="center">Student at EFREI Paris, Front-end Engineering Intern at Ekino, and Partnerships Manager at BDS Efrei.</h3>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
----
+## Getting Started
 
-- 🔭 I’m currently working at **Ekino** as a **Front-end Engineering Intern**.
+First, run the development server:
 
-- 🌱 I’m continuously learning and improving my skills in **React, Next.js, TypeScript, and Node.js**.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- 👨‍💻 All of my projects are available on [my GitHub](https://github.com/maelaubert56) and [my portfolio](http://www.maelaubert.fr).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- 🎸 I play guitar in a band called **SoulBrothers**. Check out our music on [YouTube](https://www.youtube.com/@SoulBrothers777).
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- ⚡ Fun fact: **I combine my passion for sports and coding through my involvement with BDS Efrei!**
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-<h3 align="center">Connect with me:</h3>
+To learn more about Next.js, take a look at the following resources:
 
-<p align="center">
-  <a href="mailto:mael.aubert@efrei.net"><img src="https://img.icons8.com/color/48/000000/gmail--v1.png" alt="Email" height="30"/></a>
-  <a href="https://linkedin.com/in/mael-aubert" target="blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" height="30"/></a>
-</p>
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-<h3 align="center">Languages and Tools:</h3>
+## Deploy on Vercel
 
-<p align="center">
-  <!-- Tech Stack Badges -->
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" style="margin: 10px;"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" style="margin: 10px;"/>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" style="margin: 10px;"/>
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" style="margin: 10px;"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" style="margin: 10px;"/>
-</p>
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=maelaubert56&show_icons=true&locale=en&layout=compact&theme=radical" alt="maelaubert56 Top Languages" />
-</p>
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
