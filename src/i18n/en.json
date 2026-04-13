@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "experience": "Experience",
+    "technologies": "Technologies",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "JavaScript Developer",
+    "description": "I build modern, performant and polished web experiences with React, Next.js and TypeScript.",
+    "cta": "View my projects",
+    "cv": "Download my CV"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of my recent work.",
+    "filterAll": "All",
+    "viewSite": "View site"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey.",
+    "pro": "Professional experience",
+    "associative": "Extracurricular experience",
+    "now": "Now",
+    "keyAchievements": "Key achievements"
+  },
+  "technologies": {
+    "title": "Technologies",
+    "subtitle": "The tools and languages I use daily."
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "My academic background.",
+    "now": "Now"
+  },
+  "about": {
+    "title": "About",
+    "p1": "Passionate about web development for several years, I specialize in the JavaScript ecosystem with a focus on <strong>React</strong>, <strong>Next.js</strong> and <strong>TypeScript</strong>.",
+    "p2": "I place great importance on <strong>code quality</strong>, <strong>user experience</strong> and <strong>design</strong>. Every project is an opportunity to create something beautiful, performant and maintainable.",
+    "p3": "Currently a developer at <strong>Ekino</strong>, I work on complex web applications for major clients, while continuing to explore the latest technologies on my own.",
+    "quote": "\"Simple but mastered\" — that's my philosophy, in code as in design."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Don't hesitate to reach out.",
+    "description": "I'm available for freelance work or full-time opportunities. Contact me by email or find me on social media."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "source": "Source code"
+  },
+  "a11y": {
+    "close": "Close",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode"
+  },
+  "metadata": {
+    "title": "Maël Aubert — JavaScript Developer",
+    "description": "Portfolio of Maël Aubert, JavaScript developer specialized in React, Next.js & Node.js."
+  }
+}

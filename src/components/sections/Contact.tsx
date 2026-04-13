@@ -3,6 +3,7 @@
 import { Mail } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import { useI18n } from "@/i18n/provider";
 
 function GitHubIcon({ size = 18 }: { size?: number }) {
   return (
@@ -23,46 +24,35 @@ function LinkedInIcon({ size = 18 }: { size?: number }) {
 const socials = [
   {
     label: "Email",
-    href: "mailto:mael.aubert@example.com",
+    href: "mailto:maelaubert56@gmail.com",
     icon: Mail,
   },
   {
     label: "GitHub",
-    href: "https://github.com/maelaubert",
+    href: "https://github.com/maelaubert56",
     icon: GitHubIcon,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/maelaubert",
+    href: "https://linkedin.com/in/maelaubert56",
     icon: LinkedInIcon,
   },
 ];
 
 export default function Contact() {
+  const { t } = useI18n();
   return (
     <SectionWrapper id="contact">
-      {/* Geometric shapes */}
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        aria-hidden="true"
-      >
-        <div className="absolute top-[25%] left-[35%] geo-hex h-[100px] w-[100px] bg-pastel-pink/70 animate-float-fast" />
-        <div className="absolute bottom-[15%] right-[30%] geo-diamond h-[90px] w-[90px] bg-pastel-purple/65 animate-float-medium" />
-      </div>
-
       <div className="relative z-10 mx-auto max-w-xl text-center">
         <h2 className="mb-4 text-2xl font-bold tracking-tight text-text-primary md:text-3xl">
-          Contact
+          {t.contact.title}
         </h2>
-        <p className="mb-8 text-text-secondary">
-          Un projet en tête ? N&apos;hésitez pas à me contacter.
-        </p>
+        <p className="mb-8 text-text-secondary">{t.contact.subtitle}</p>
 
         <GlassCard hover={false} className="p-8">
           <div className="flex flex-col items-center gap-6">
             <p className="text-sm leading-relaxed text-text-secondary">
-              Je suis disponible pour des missions freelance ou des opportunités
-              en CDI. Contactez-moi par email ou retrouvez-moi sur les réseaux.
+              {t.contact.description}
             </p>
 
             <div className="flex gap-4">

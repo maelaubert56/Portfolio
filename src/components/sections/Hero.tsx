@@ -2,41 +2,27 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
+import { useI18n } from "@/i18n/provider";
 
 const decorativeCards = [
   {
-    className: "absolute -top-6 -left-12 h-36 w-56 rotate-[-6deg] opacity-40",
-    delay: 0.3,
-  },
-  {
-    className:
-      "absolute -bottom-8 -right-10 h-32 w-48 rotate-[4deg] opacity-30",
+    id: 1,
+    className: "absolute -bottom-15 -left-40 h-36 w-56 rotate-[-6deg]",
     delay: 0.5,
   },
   {
-    className: "absolute top-10 -right-20 h-28 w-40 rotate-[8deg] opacity-25",
+    id: 2,
+    className: "absolute -bottom-8 -left-20 h-32 w-48 rotate-[4deg]",
     delay: 0.7,
   },
 ];
 
 export default function Hero() {
+  const { t } = useI18n();
   return (
-    <section className="relative flex min-h-screen items-center justify-center px-6 pt-24 pb-12">
-      {/* Geometric shapes behind hero card */}
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        aria-hidden="true"
-      >
-        <div className="absolute top-[30%] left-[30%] geo-diamond h-[140px] w-[140px] bg-pastel-pink/80 animate-float-slow" />
-        <div
-          className="absolute top-[40%] right-[25%] geo-ring h-[170px] w-[170px] animate-float-medium"
-          style={{ borderColor: "rgba(233,228,240,0.9)", borderWidth: "4px" }}
-        />
-        <div className="absolute bottom-[30%] left-[50%] -translate-x-1/2 geo-hex h-[110px] w-[110px] bg-pastel-green/70 animate-float-fast" />
-        <div className="absolute top-[50%] left-[35%] geo-dots h-[130px] w-[130px] text-pastel-purple/45 animate-float-medium" />
-      </div>
-
+    <section className="relative flex items-center justify-center px-6 pb-12">
       <div className="relative z-10 mx-auto w-full max-w-2xl">
         {/* Decorative cards */}
         {decorativeCards.map((card, i) => (
@@ -46,11 +32,7 @@ export default function Hero() {
             className={card.className}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{
-              opacity: card.className.includes("opacity-40")
-                ? 0.4
-                : card.className.includes("opacity-30")
-                  ? 0.3
-                  : 0.25,
+              opacity: card.id === 1 ? 0.8 : 0.6,
               scale: 1,
             }}
             transition={{
@@ -65,6 +47,7 @@ export default function Hero() {
         <GlassCard
           hover={false}
           className="relative z-10 p-10 pt-28 md:p-14 md:pt-14"
+          style={{ overflow: "visible" }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -87,7 +70,7 @@ export default function Hero() {
               width={1200}
               height={140}
               priority
-              className="h-[130px] w-[130px] rounded-3xl object-cover shadow-lg ring-4 ring-white/30 md:h-[180px] md:w-[180px]"
+              className="h-[90px] w-[90px] rounded-3xl object-cover shadow-lg ring-3 ring-white/30 md:h-[180px] md:w-[180px]"
             />
           </motion.div>
 
@@ -107,7 +90,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.6 }}
             >
-              Développeur JavaScript
+              {t.hero.subtitle}
             </motion.p>
 
             <motion.p
@@ -116,19 +99,32 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.6 }}
             >
-              Je crée des expériences web modernes, performantes et soignées
-              avec React, Next.js et TypeScript.
+              {t.hero.description}
             </motion.p>
 
-            <motion.a
-              href="#projects"
-              className="mt-8 inline-flex rounded-full bg-text-primary px-6 py-3 text-sm font-medium text-bg-main transition-colors hover:bg-text-primary/90"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45, duration: 0.6 }}
-            >
-              Voir mes projets
-            </motion.a>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row md:items-start">
+              <motion.a
+                href="#projects"
+                className="inline-flex rounded-full bg-text-primary px-6 py-3 text-sm font-medium text-bg-main transition-colors hover:bg-text-primary/90"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45, duration: 0.6 }}
+              >
+                {t.hero.cta}
+              </motion.a>
+
+              <motion.a
+                href="/cv-mael-aubert.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-full border border-glass-border px-6 py-3 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary hover:border-text-secondary/30"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.55, duration: 0.6 }}
+              >
+                <Download size={16} />
+                {t.hero.cv}
+              </motion.a>
+            </div>
           </div>
         </GlassCard>
       </div>

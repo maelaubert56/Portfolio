@@ -1,42 +1,71 @@
 "use client";
 
+import { type ComponentType } from "react";
 import { motion } from "framer-motion";
 import GlassCard from "@/components/ui/GlassCard";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { technologies } from "@/data/technologies";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiHtml5,
+  SiVuedotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiGraphql,
+  SiGit,
+  SiDocker,
+  SiGithubactions,
+  SiGithubcopilot,
+  SiFigma,
+  SiJest,
+} from "react-icons/si";
+import { TbApi, TbLayoutGrid } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
+import { useI18n } from "@/i18n/provider";
 
-const categories = [
-  { key: "frontend" as const, label: "Frontend", color: "bg-pastel-pink/50" },
-  { key: "backend" as const, label: "Backend", color: "bg-pastel-green/50" },
-  { key: "tools" as const, label: "Tools", color: "bg-pastel-purple/50" },
-];
-
-const levelDots: Record<string, number> = {
-  beginner: 1,
-  intermediate: 2,
-  advanced: 3,
+const techIcons: Record<string, ComponentType<{ className?: string }>> = {
+  React: SiReact,
+  "Next.js": SiNextdotjs,
+  "Micro-Frontends": TbLayoutGrid,
+  TypeScript: SiTypescript,
+  JavaScript: SiJavascript,
+  "Tailwind CSS": SiTailwindcss,
+  "HTML/CSS": SiHtml5,
+  "Vue.js": SiVuedotjs,
+  "Node.js": SiNodedotjs,
+  Express: SiExpress,
+  PostgreSQL: SiPostgresql,
+  "REST API": TbApi,
+  GraphQL: SiGraphql,
+  Git: SiGit,
+  Docker: SiDocker,
+  Azure: VscAzure,
+  "GitHub Actions": SiGithubactions,
+  "GitHub Copilot": SiGithubcopilot,
+  Figma: SiFigma,
+  Jest: SiJest,
 };
 
+const categories = [
+  { key: "frontend" as const, label: "Frontend" },
+  { key: "backend" as const, label: "Backend" },
+  { key: "tools" as const, label: "Tools" },
+];
+
 export default function Technologies() {
+  const { t } = useI18n();
   return (
     <SectionWrapper id="technologies">
-      {/* Geometric shapes */}
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        aria-hidden="true"
-      >
-        <div className="absolute top-[10%] left-[40%] geo-hex h-[120px] w-[120px] bg-pastel-green/70 animate-float-fast" />
-        <div className="absolute bottom-[15%] left-[30%] geo-diamond h-[100px] w-[100px] bg-pastel-purple/65 animate-float-slow" />
-        <div className="absolute top-[45%] right-[25%] geo-cross h-[80px] w-[80px] bg-pastel-pink/55 animate-float-medium" />
-      </div>
-
       <div className="relative z-10 mx-auto max-w-5xl">
         <h2 className="mb-4 text-2xl font-bold tracking-tight text-text-primary md:text-3xl">
-          Technologies
+          {t.technologies.title}
         </h2>
-        <p className="mb-12 text-text-secondary">
-          Les outils et langages que j&apos;utilise au quotidien.
-        </p>
+        <p className="mb-12 text-text-secondary">{t.technologies.subtitle}</p>
 
         <div className="grid gap-8 md:grid-cols-3">
           {categories.map((cat, ci) => (
@@ -60,7 +89,7 @@ export default function Technologies() {
                   .map((tech, ti) => (
                     <GlassCard
                       key={tech.name}
-                      className="flex items-center justify-between px-4 py-3"
+                      className="flex items-center gap-3 px-4 py-3"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -69,23 +98,16 @@ export default function Technologies() {
                         delay: ci * 0.1 + ti * 0.04,
                       }}
                     >
+                      {techIcons[tech.name] &&
+                        (() => {
+                          const Icon = techIcons[tech.name];
+                          return (
+                            <Icon className="h-4 w-4 shrink-0 text-text-secondary" />
+                          );
+                        })()}
                       <span className="text-sm font-medium text-text-primary">
                         {tech.name}
                       </span>
-                      {tech.level && (
-                        <div className="flex gap-1">
-                          {[1, 2, 3].map((dot) => (
-                            <div
-                              key={dot}
-                              className={`h-1.5 w-1.5 rounded-full ${
-                                dot <= levelDots[tech.level!]
-                                  ? cat.color
-                                  : "bg-black/5"
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      )}
                     </GlassCard>
                   ))}
               </div>

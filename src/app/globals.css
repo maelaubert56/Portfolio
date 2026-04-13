@@ -13,6 +13,18 @@
   --text-secondary: #6b6b6b;
 }
 
+.dark {
+  --bg-main: #0a0a0a;
+  --bg-gradient: linear-gradient(135deg, #0a0a0a, #111111);
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --pastel-pink: #3d2626;
+  --pastel-green: #1e3329;
+  --pastel-purple: #2d2837;
+  --text-primary: #e8e8e8;
+  --text-secondary: #999999;
+}
+
 @theme inline {
   --color-bg-main: var(--bg-main);
   --color-glass-bg: var(--glass-bg);
@@ -31,10 +43,13 @@ html {
 }
 
 body {
-  background: var(--bg-gradient);
+  background: var(--bg-main);
   color: var(--text-primary);
   font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100vh;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {

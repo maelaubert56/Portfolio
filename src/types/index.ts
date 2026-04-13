@@ -15,12 +15,16 @@ export interface Experience {
   id: string;
   role: string;
   company: string;
+  category: "pro" | "associative";
+  contractType?: string;
   dateStart: string;
   dateEnd?: string;
   description: string;
+  longDescription: string;
   logo: string;
   location?: string;
   technologies?: string[];
+  highlights?: string[];
 }
 
 export interface Technology {

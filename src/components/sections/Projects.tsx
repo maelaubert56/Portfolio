@@ -8,8 +8,10 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import ProjectModal from "@/components/ProjectModal";
 import { projects } from "@/data/projects";
 import type { Project } from "@/types";
+import { useI18n } from "@/i18n/provider";
 
 export default function Projects() {
+  const { t, tp } = useI18n();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState<string>("all");
 
@@ -29,27 +31,11 @@ export default function Projects() {
 
   return (
     <SectionWrapper id="projects">
-      {/* Geometric shapes */}
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        aria-hidden="true"
-      >
-        <div
-          className="absolute top-[5%] right-[30%] geo-ring h-[180px] w-[180px] animate-float-slow"
-          style={{ borderColor: "rgba(220,239,230,0.85)", borderWidth: "4px" }}
-        />
-        <div className="absolute top-[35%] left-[25%] geo-diamond h-[120px] w-[120px] bg-pastel-pink/70 animate-float-medium" />
-        <div className="absolute bottom-[15%] right-[35%] geo-hex h-[100px] w-[100px] bg-pastel-purple/65 animate-float-fast" />
-        <div className="absolute top-[55%] left-[45%] geo-cross h-[90px] w-[90px] bg-pastel-green/55 animate-float-slow" />
-      </div>
-
       <div className="relative z-10 mx-auto max-w-6xl">
         <h2 className="mb-4 text-2xl font-bold tracking-tight text-text-primary md:text-3xl">
-          Projets
+          {t.projects.title}
         </h2>
-        <p className="mb-8 text-text-secondary">
-          Une sélection de mes réalisations récentes.
-        </p>
+        <p className="mb-8 text-text-secondary">{t.projects.subtitle}</p>
 
         {/* Filter pills */}
         <div className="mb-10 flex flex-wrap gap-2">
@@ -61,7 +47,7 @@ export default function Projects() {
                 : "bg-glass-bg text-text-secondary border border-glass-border hover:text-text-primary"
             }`}
           >
-            Tous
+            {t.projects.filterAll}
           </button>
           {allTechs.map((tech) => (
             <button
@@ -85,7 +71,7 @@ export default function Projects() {
               <GlassCard
                 key={project.id}
                 layoutId={`project-${project.id}`}
-                className="cursor-pointer overflow-hidden p-0"
+                className="flex cursor-pointer flex-col overflow-hidden p-0"
                 onClick={() => setSelectedProject(project)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -108,15 +94,17 @@ export default function Projects() {
                     />
                   )}
                 </div>
-                <div className="p-5">
+                <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-semibold text-text-primary">
                     {project.name}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-text-secondary">
-                    {project.shortDescription}
+                    {(tp as Record<string, { shortDescription: string }>)[
+                      project.id
+                    ]?.shortDescription ?? project.shortDescription}
                   </p>
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {project.technologies.map((tech) => (
+                  <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
+                    {project.technologies.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
                         className="rounded-full bg-pastel-purple/40 px-2.5 py-0.5 text-[11px] font-medium text-text-secondary"

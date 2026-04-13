@@ -3,16 +3,20 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "#projects", label: "Projets" },
-  { href: "#experience", label: "Expérience" },
-  { href: "#technologies", label: "Technologies" },
-  { href: "#about", label: "À propos" },
-  { href: "#contact", label: "Contact" },
-];
+import ThemeToggle from "@/components/ThemeToggle";
+import LocaleToggle from "@/components/LocaleToggle";
+import { useI18n } from "@/i18n/provider";
 
 export default function Navigation() {
+  const { t } = useI18n();
+  const links = [
+    { href: "#projects", label: t.nav.projects },
+    { href: "#experience", label: t.nav.experience },
+    { href: "#technologies", label: t.nav.technologies },
+    { href: "#about", label: t.nav.about },
+    { href: "#contact", label: t.nav.contact },
+  ];
+
   const [active, setActive] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -48,10 +52,10 @@ export default function Navigation() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "bg-glass-bg border-b border-glass-border backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
-          : ""
+          ? "bg-glass-bg border-glass-border backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
+          : "border-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -78,17 +82,27 @@ export default function Navigation() {
               </a>
             </li>
           ))}
+          <li>
+            <LocaleToggle />
+          </li>
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
 
         {/* Mobile toggle */}
-        <button
-          className="text-text-primary md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LocaleToggle />
+          <ThemeToggle />
+          <button
+            className="text-text-primary"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? t.a11y.closeMenu : t.a11y.openMenu}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

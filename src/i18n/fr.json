@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "projects": "Projets",
+    "experience": "Expérience",
+    "technologies": "Technologies",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Développeur JavaScript",
+    "description": "Je crée des expériences web modernes, performantes et soignées avec React, Next.js et TypeScript.",
+    "cta": "Voir mes projets",
+    "cv": "Télécharger mon CV"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une sélection de mes réalisations récentes.",
+    "filterAll": "Tous",
+    "viewSite": "Voir le site"
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Mon parcours professionnel.",
+    "pro": "Expériences professionnelles",
+    "associative": "Expériences associatives",
+    "now": "Maintenant",
+    "keyAchievements": "Réalisations clés"
+  },
+  "technologies": {
+    "title": "Technologies",
+    "subtitle": "Les outils et langages que j'utilise au quotidien."
+  },
+  "education": {
+    "title": "Formation",
+    "subtitle": "Mon parcours académique.",
+    "now": "Maintenant"
+  },
+  "about": {
+    "title": "À propos",
+    "p1": "Passionné par le développement web depuis plusieurs années, je me spécialise dans l'écosystème JavaScript avec un focus sur <strong>React</strong>, <strong>Next.js</strong> et <strong>TypeScript</strong>.",
+    "p2": "J'accorde une importance particulière à la <strong>qualité du code</strong>, à l'<strong>expérience utilisateur</strong> et au <strong>design</strong>. Chaque projet est une occasion de créer quelque chose de beau, performant et maintenable.",
+    "p3": "Actuellement développeur chez <strong>Ekino</strong>, j'interviens sur des applications web complexes pour des clients grands comptes, tout en continuant à explorer les dernières technologies côté personnel.",
+    "quote": "\"Simple mais maîtrisé\" — c'est ma philosophie, dans le code comme dans le design."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Un projet en tête ? N'hésitez pas à me contacter.",
+    "description": "Je suis disponible pour des missions freelance ou des opportunités en CDI. Contactez-moi par email ou retrouvez-moi sur les réseaux."
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "source": "Code source"
+  },
+  "a11y": {
+    "close": "Fermer",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu",
+    "prevImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "lightMode": "Passer en mode clair",
+    "darkMode": "Passer en mode sombre"
+  },
+  "metadata": {
+    "title": "Maël Aubert — Développeur JavaScript",
+    "description": "Portfolio de Maël Aubert, développeur JavaScript spécialisé React, Next.js & Node.js."
+  }
+}

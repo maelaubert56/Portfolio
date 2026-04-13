@@ -1,0 +1,62 @@
+{
+  "ekino": {
+    "role": "Frontend Developer (Apprenticeship)",
+    "contractType": "Apprenticeship",
+    "description": "Development of a Next.js e-commerce website for a major client. Fullstack development of an internal codebase audit application.",
+    "longDescription": "As a frontend developer apprentice at Ekino, I worked on two major projects. The first is a Next.js e-commerce site in micro-frontends architecture for a major retail client, where I developed reusable components, set up unit tests with Jest and optimized rendering performance. The second project is an internal fullstack application for automated codebase auditing, analyzing code quality, outdated dependencies and compliance with company standards. I contributed to the technical architecture, Node.js backend development and the React user interface.",
+    "highlights": [
+      "Development of a micro-frontends Next.js e-commerce site",
+      "Creation of an internal codebase audit app",
+      "Unit and integration testing with Jest",
+      "Client-side rendering performance optimization"
+    ]
+  },
+  "intm": {
+    "role": "Business Manager",
+    "contractType": "Part-time Fixed-term",
+    "description": "Prospecting major accounts to match needs with tech human resources (digital, cloud and data). Part-time fixed-term contract alongside studies.",
+    "longDescription": "As a Business Manager at INTM Groupe, I handled commercial prospecting with major accounts to identify their tech HR needs, primarily focused on digital, cloud and data. My role involved understanding clients' technical challenges, proposing suitable profiles and supporting the placement process. This part-time position, held alongside my studies, allowed me to develop skills in commercial negotiation, understanding of tech roles and B2B client relationship management.",
+    "highlights": [
+      "Major account prospecting (digital, cloud, data)",
+      "Client needs / tech profile matching",
+      "B2B commercial negotiation",
+      "Position held alongside studies"
+    ]
+  },
+  "live-efrei-president": {
+    "role": "President",
+    "company": "Live Efrei — Music Association",
+    "description": "Leading an association of 120 members. Managing a team of 12 people, organizing concerts of 400+ attendees, budgetary and administrative management. Developing the association's website.",
+    "longDescription": "At the head of Live Efrei, the school's music association, I led a team of 12 department heads and coordinated the activities of 120 active members. My role encompassed budget management (sponsor negotiation, expense tracking), logistics of concerts hosting over 400 people, as well as communication and relations with the school administration. I also developed the association's website, allowing members to check rehearsal schedules, register for events and share musical resources.",
+    "highlights": [
+      "Leading a team of 12 department heads",
+      "Organizing concerts of 400+ attendees",
+      "Budget management and sponsor relations",
+      "Developing the association's website"
+    ]
+  },
+  "bda-efrei-vp": {
+    "role": "Vice-President",
+    "company": "BDA Efrei — Arts Association",
+    "description": "Organizing the end-of-year show (theater, music, dance) bringing together all artistic associations. Developing the bda-efrei.fr website.",
+    "longDescription": "As Vice-President of EFREI's Arts Association, I co-organize the end-of-year show, a major event combining theater, music and dance, bringing together all the school's artistic associations. My role involves inter-association coordination, logistics planning, rehearsal management and event communication. I also developed the association's website (bda-efrei.fr) to centralize information, registrations and promote artistic activities to students.",
+    "highlights": [
+      "Organizing the inter-association end-of-year show",
+      "Theater, music and dance coordination",
+      "Developing the bda-efrei.fr website",
+      "Communication and promotion of artistic events"
+    ]
+  },
+  "bds-efrei-tech": {
+    "role": "Tech Lead & Partnerships Manager",
+    "company": "BDS Efrei — Sports Association",
+    "description": "Development of 3 apps (training management, excused absences, showcase website). Partner prospecting and management.",
+    "longDescription": "Within EFREI's Sports Association, I hold a dual role as tech lead and partnerships manager. On the tech side, I developed and improved three applications: a training management app for sports clubs, an app to simplify administrative documents for excused absences, and the main showcase website displaying clubs, training schedules and team results automatically fetched via FFSU scraping. On the partnerships side, I handle prospecting new partners and managing existing relationships to fund the association's sports activities.",
+    "highlights": [
+      "Development of a training management app",
+      "Excused absence simplification app",
+      "Showcase website with automatic FFSU results scraping",
+      "Partner prospecting and management"
+    ]
+  }
+}

@@ -3,22 +3,23 @@ import { Education } from "@/types";
 export const education: Education[] = [
   {
     id: "efrei",
-    title: "Master Informatique — Développement Web",
-    school: "EFREI Paris",
+    title:
+      "Ingénierie Informatique — Majeure Logicels et Systèmes d'Information",
+    school: "EFREI Paris Panthéon Assas",
     dateStart: "2021-09",
-    dateEnd: "2024-07",
+    dateEnd: "2026-08",
     description:
-      "Formation d'ingénieur en informatique avec spécialisation développement web et technologies JavaScript.",
+      "Formation d'ingénieur en informatique avec spécialisation développement logiciel - 4 et 5ème année en alternance.",
     location: "Villejuif, France",
   },
   {
-    id: "prepa",
-    title: "Classe Préparatoire Intégrée",
-    school: "EFREI Paris",
-    dateStart: "2019-09",
-    dateEnd: "2021-07",
+    id: "apu",
+    title: "Semestre à l'étranger",
+    school: "Asia Pacific University",
+    dateStart: "2023-08",
+    dateEnd: "2023-12",
     description:
-      "Fondamentaux en mathématiques, algorithmique et programmation.",
-    location: "Villejuif, France",
+      "Semestre à l'Asia Pacific University de Kuala Lumpur, Malaisie. Cours suivis : Web Development, Networking, Cryptography, Assembly Programming...",
+    location: "Kuala Lumpur, Malaisie",
   },
 ];

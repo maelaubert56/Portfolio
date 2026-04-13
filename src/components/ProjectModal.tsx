@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
 import type { Project } from "@/types";
+import { useI18n } from "@/i18n/provider";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -13,6 +14,7 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const { t, tp } = useI18n();
   const [currentImage, setCurrentImage] = useState(0);
 
   const handleKeyDown = useCallback(
@@ -105,7 +107,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                       )
                     }
                     className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-1.5 text-white backdrop-blur-sm transition-colors hover:bg-black/50"
-                    aria-label="Image précédente"
+                    aria-label={t.a11y.prevImage}
                   >
                     <ChevronLeft size={20} />
                   </button>
@@ -116,7 +118,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                       )
                     }
                     className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-1.5 text-white backdrop-blur-sm transition-colors hover:bg-black/50"
-                    aria-label="Image suivante"
+                    aria-label={t.a11y.nextImage}
                   >
                     <ChevronRight size={20} />
                   </button>
@@ -146,14 +148,16 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <button
                   onClick={onClose}
                   className="rounded-full p-1.5 text-text-secondary transition-colors hover:bg-black/5 hover:text-text-primary"
-                  aria-label="Fermer"
+                  aria-label={t.a11y.close}
                 >
                   <X size={20} />
                 </button>
               </div>
 
               <p className="mt-4 text-sm leading-relaxed text-text-secondary md:text-base">
-                {project.longDescription}
+                {(tp as Record<string, { longDescription?: string }>)[
+                  project.id
+                ]?.longDescription ?? project.longDescription}
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
@@ -193,7 +197,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     className="inline-flex items-center gap-2 rounded-full border border-glass-border bg-glass-bg px-5 py-2.5 text-sm font-medium text-text-primary backdrop-blur-sm transition-colors hover:bg-white/70"
                   >
                     <ExternalLink size={16} />
-                    Voir le site
+                    {t.projects.viewSite}
                   </a>
                 )}
               </div>
