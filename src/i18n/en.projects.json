@@ -1,0 +1,18 @@
+{
+  "sonat-ai": {
+    "shortDescription": "AI-powered music app that separates stems, generates chords and sheet music from any track.",
+    "longDescription": "AI-powered music application. Sonat AI separates audio tracks (stems) from a song and automatically generates chords and sheet music. Audio processing pipeline with BullMQ and Redis, Demucs AI model for source separation."
+  },
+  "live-efrei": {
+    "shortDescription": "EFREI music association website — room booking, management of 120 members.",
+    "longDescription": "Web platform for the EFREI music association. Music room booking, member management and association administration. Discord integration for notifications. Used by the association's 120 members."
+  },
+  "dae-hub": {
+    "shortDescription": "EFREI excused absence management system — 3-level validation, GDPR compliant.",
+    "longDescription": "Management platform for EFREI's excused absence system, replacing the previous PDF-based process. 3-level validation workflow (student → association → administration). Strong GDPR compliance requirements due to student personal data processing. Target: all students, 60+ association boards, absence and student life services."
+  },
+  "bds-app": {
+    "shortDescription": "Sports association training management app — 360 members, 13 sports.",
+    "longDescription": "Training management application for EFREI's Sports Association. Attendance tracking, conditional training display based on student status, calculation of engagement points granted by the school. 360 active users, 13 sports represented. Email and Discord notifications."
+  }
+}

@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Maël !</h1>
-<h3 align="center">Student at EFREI Paris, Front-end Engineering Intern at Ekino, and Partnerships Manager at BDS Efrei.</h3>
+<h3 align="center">Student at EFREI Paris, Front-end Engineering Intern at Ekino, and President of Live Efrei.</h3>
 
 ---
 
@@ -11,7 +11,7 @@
 
 - 🎸 I play guitar in a band called **SoulBrothers**. Check out our music on [YouTube](https://www.youtube.com/@SoulBrothers777).
 
-- ⚡ Fun fact: **I combine my passion for sports and coding through my involvement with BDS Efrei!**
+- ⚡ Fun fact: **I combine my passion for sports and coding through my involvement with BDS Efrei and Live Efrei!**
 
 ---
 
@@ -33,10 +33,4 @@
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" style="margin: 10px;"/>
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" style="margin: 10px;"/>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" style="margin: 10px;"/>
-</p>
-
----
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=maelaubert56&show_icons=true&locale=en&layout=compact&theme=radical" alt="maelaubert56 Top Languages" />
 </p>

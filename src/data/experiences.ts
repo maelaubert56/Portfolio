@@ -1,0 +1,116 @@
+import { Experience } from "@/types";
+
+export const experiences: Experience[] = [
+  // --- Expériences professionnelles ---
+  {
+    id: "ekino",
+    role: "Développeur Frontend Alternant",
+    company: "Ekino",
+    category: "pro",
+    contractType: "Alternance",
+    dateStart: "2024-09",
+    description:
+      "Développement du site ecommerce web Next.js pour d'un grand compte. Développement fullstack d'une application interne d'audit de codebases.",
+    longDescription:
+      "En tant que développeur frontend alternant chez Ekino, j'ai travaillé sur deux projets majeurs. Le premier est un site e-commerce Next.js en architecture micro-frontends pour un grand compte du retail, où j'ai développé des composants réutilisables, mis en place des tests unitaires avec Jest et optimisé les performances de rendu. Le second projet est une application interne fullstack d'audit automatisé de codebases, permettant d'analyser la qualité du code, les dépendances obsolètes et la conformité aux standards de l'entreprise. J'ai contribué à l'architecture technique, au développement du backend Node.js et à l'interface utilisateur React.",
+    logo: "/images/logos/ekino.png",
+    location: "Paris, France",
+    technologies: [
+      "Next.js",
+      "Micro-Frontends",
+      "TypeScript",
+      "Node.js",
+      "Jest",
+    ],
+    highlights: [
+      "Développement d'un site e-commerce micro-frontends Next.js",
+      "Création d'une app interne d'audit de codebases",
+      "Tests unitaires et d'intégration avec Jest",
+      "Optimisation des performances de rendu côté client",
+    ],
+  },
+  {
+    id: "intm",
+    role: "Business Manager",
+    company: "INTM Groupe",
+    category: "pro",
+    contractType: "CDD Temps Partiel",
+    dateStart: "2023-01",
+    dateEnd: "2023-07",
+    description:
+      "Prospection de grands comptes pour faire correspondre des besoins avec des ressources humaines tech (digital, cloud et data). CDD temps partiel en parallèle des études.",
+    longDescription:
+      "En tant que Business Manager chez INTM Groupe, j'ai assuré la prospection commerciale auprès de grands comptes afin d'identifier leurs besoins en ressources humaines tech, principalement orientées digital, cloud et data. Mon rôle consistait à comprendre les enjeux techniques des clients, proposer des profils adaptés et accompagner le processus de placement. Ce poste en CDD temps partiel, exercé en parallèle de mes études, m'a permis de développer des compétences en négociation commerciale, en compréhension des métiers tech et en gestion de la relation client B2B.",
+    logo: "/images/logos/intm.png",
+    location: "Paris, France",
+    technologies: ["Prospection B2B", "Recrutement tech", "Commercial"],
+    highlights: [
+      "Prospection de grands comptes (digital, cloud, data)",
+      "Matching besoins clients / profils tech",
+      "Négociation commerciale B2B",
+      "Poste exercé en parallèle des études",
+    ],
+  },
+
+  // --- Expériences associatives ---
+  {
+    id: "live-efrei-president",
+    role: "Président",
+    company: "Live Efrei — Association de musique",
+    category: "associative",
+    dateStart: "2025-03",
+    description:
+      "Direction d'une association de 120 membres. Gestion d'une équipe de 12 personnes, organisation de concerts de +400 personnes, gestion budgétaire et administrative. Développement du site web de l'association.",
+    longDescription:
+      "À la tête de Live Efrei, l'association musicale de l'école, j'ai dirigé une équipe de 12 responsables de pôles et coordonné les activités de 120 membres actifs. Mon rôle a englobé la gestion budgétaire (négociation de sponsors, suivi des dépenses), l'organisation logistique de concerts accueillant plus de 400 personnes, ainsi que la communication et les relations avec l'administration de l'école. J'ai également développé le site web de l'association, permettant aux membres de consulter le planning des répétitions, de s'inscrire aux événements et de partager des ressources musicales.",
+    logo: "/images/logos/live-efrei.png",
+    location: "Villejuif, France",
+    technologies: ["Management", "Événementiel"],
+    highlights: [
+      "Direction d'une équipe de 12 responsables de pôles",
+      "Organisation de concerts de +400 personnes",
+      "Gestion budgétaire et relations sponsors",
+      "Développement du site web de l'association",
+    ],
+  },
+  {
+    id: "bda-efrei-vp",
+    role: "Vice-Président",
+    company: "BDA Efrei — Bureau des Arts",
+    category: "associative",
+    dateStart: "2025-04",
+    description:
+      "Organisation du spectacle de fin d'année (théâtre, musique, danse) rassemblant toutes les associations artistiques. Développement du site web bda-efrei.fr.",
+    longDescription:
+      "En tant que Vice-Président du Bureau des Arts d'Efrei, je co-organise le spectacle de fin d'année, un événement majeur mêlant théâtre, musique et danse, rassemblant l'ensemble des associations artistiques de l'école. Mon rôle implique la coordination inter-associations, la planification logistique, la gestion des répétitions et la communication de l'événement. J'ai également développé le site web de l'association (bda-efrei.fr) pour centraliser les informations, les inscriptions et promouvoir les activités artistiques auprès des étudiants.",
+    logo: "/images/logos/bda-efrei.png",
+    location: "Villejuif, France",
+    technologies: ["Management", "Événementiel", "Développement web"],
+    highlights: [
+      "Organisation du spectacle de fin d'année inter-associations",
+      "Coordination théâtre, musique et danse",
+      "Développement du site web bda-efrei.fr",
+      "Communication et promotion des événements artistiques",
+    ],
+  },
+  {
+    id: "bds-efrei-tech",
+    role: "Responsable Tech & Partenariats",
+    company: "BDS Efrei — Bureau des Sports",
+    category: "associative",
+    dateStart: "2023-05",
+    description:
+      "Développement de 3 apps (gestion d'entraînements, absences excusées, site vitrine). Prospection et gestion des partenariats.",
+    longDescription:
+      "Au sein du Bureau des Sports d'Efrei, j'occupe un double rôle de responsable technique et responsable partenariats. Côté tech, j'ai développé et amélioré trois applications : une app de gestion des entraînements pour les clubs sportifs, une app de simplification administrative des documents d'absences excusées, et le site principal vitrine affichant les clubs, les créneaux d'entraînements et les résultats des équipes automatiquement récupérés via scraping de la FFSU. Côté partenariats, j'assure la prospection de nouveaux partenaires et la gestion des relations existantes pour financer les activités sportives de l'association.",
+    logo: "/images/logos/bds-efrei.png",
+    location: "Villejuif, France",
+    technologies: ["React", "Node.js", "Web Scraping", "Partenariats"],
+    highlights: [
+      "Développement d'une app de gestion des entraînements",
+      "App de simplification des absences excusées",
+      "Site vitrine avec scraping automatique des résultats FFSU",
+      "Prospection et gestion des partenariats",
+    ],
+  },
+];

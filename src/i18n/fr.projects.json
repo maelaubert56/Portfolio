@@ -1,0 +1,18 @@
+{
+  "sonat-ai": {
+    "shortDescription": "App musicale IA qui sépare les stems, génère les accords et partitions depuis n'importe quel morceau.",
+    "longDescription": "Application musicale propulsée par l'intelligence artificielle. Sonat AI permet de séparer les pistes audio (stems) d'un morceau, de générer automatiquement les accords et les partitions. Pipeline de traitement audio avec BullMQ et Redis, modèle IA Demucs pour la séparation de sources."
+  },
+  "live-efrei": {
+    "shortDescription": "Site de l'association musique EFREI — réservation du local, gestion des 120 membres.",
+    "longDescription": "Plateforme web de l'association de musique de l'EFREI. Réservation du local de musique, gestion des membres et administration de l'association. Intégration Discord pour les notifications. Utilisé par les 120 membres de l'association."
+  },
+  "dae-hub": {
+    "shortDescription": "Système de gestion des absences excusées EFREI — 3 niveaux de validation, conformité RGPD.",
+    "longDescription": "Plateforme de gestion du système d'absences excusées de l'EFREI, remplaçant l'ancien processus par PDF. Workflow de validation à 3 niveaux (étudiant → association → administration). Fortes exigences de conformité RGPD car traitement de données personnelles d'étudiants. Cible : ensemble des étudiants, bureaux des +60 associations, services absences et vie associative."
+  },
+  "bds-app": {
+    "shortDescription": "App de gestion des entraînements du Bureau des Sports — 360 membres, 13 sports.",
+    "longDescription": "Application de gestion des entraînements du Bureau des Sports de l'EFREI. Comptabilisation des présences, affichage conditionnel des entraînements selon le statut de l'étudiant, calcul des points d'engagement accordés par l'école. 360 utilisateurs actifs, 13 sports représentés. Notifications par email et Discord."
+  }
+}
