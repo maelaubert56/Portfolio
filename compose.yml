@@ -1,6 +1,6 @@
 services:
   portfolio:
-    image: ghcr.io/maelaubert/portfolio:latest
+    image: ghcr.io/maelaubert56/portfolio:latest
     container_name: portfolio
     restart: unless-stopped
     ports:

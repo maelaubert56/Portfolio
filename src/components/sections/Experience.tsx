@@ -67,14 +67,14 @@ function Timeline({
                 {exp.logo ? (
                   <Image
                     src={exp.logo}
-                    alt={exp.company}
+                    alt={exp.company || ""}
                     width={40}
                     height={40}
                     className="h-full w-full object-cover"
                   />
                 ) : (
                   <span className="text-xs font-bold text-text-secondary">
-                    {exp.company.charAt(0)}
+                    {exp.company?.charAt(0)}
                   </span>
                 )}
               </div>
