@@ -1,5 +1,3 @@
-"use client";
-
 import Navigation from "@/components/Navigation";
 import ScrollProgress from "@/components/ScrollProgress";
 import FloatingShapes from "@/components/FloatingShapes";
@@ -11,10 +9,9 @@ import Education from "@/components/sections/Education";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
 import PhysicsBalls from "@/components/PhysicsBalls";
-import { useI18n } from "@/i18n/provider";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  const { t } = useI18n();
   return (
     <>
       <ScrollProgress />
@@ -34,19 +31,7 @@ export default function Home() {
           <Contact />
         </main>
 
-        <footer className="relative z-10 py-8 text-center text-xs text-text-secondary">
-          <p>
-            © {new Date().getFullYear()} Maël Aubert. {t.footer.rights}
-          </p>
-          <a
-            href="https://github.com/maelaubert56/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-1 inline-block text-text-secondary/60 transition-colors hover:text-text-secondary"
-          >
-            {t.footer.source} ↗
-          </a>
-        </footer>
+        <Footer />
       </div>
     </>
   );

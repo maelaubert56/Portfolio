@@ -40,7 +40,7 @@
     "p1": "Passionné par le développement web depuis plusieurs années, je me spécialise dans l'écosystème JavaScript avec un focus sur <strong>React</strong>, <strong>Next.js</strong> et <strong>TypeScript</strong>.",
     "p2": "J'accorde une importance particulière à la <strong>qualité du code</strong>, à l'<strong>expérience utilisateur</strong> et au <strong>design</strong>. Chaque projet est une occasion de créer quelque chose de beau, performant et maintenable.",
     "p3": "Actuellement développeur chez <strong>Ekino</strong>, j'interviens sur des applications web complexes pour des clients grands comptes, tout en continuant à explorer les dernières technologies côté personnel.",
-    "quote": "\"Simple mais maîtrisé\" — c'est ma philosophie, dans le code comme dans le design."
+    "quote": "\"Simple et maîtrisé\" — c'est ma philosophie, dans le code comme dans le design."
   },
   "contact": {
     "title": "Contact",
@@ -59,9 +59,5 @@
     "nextImage": "Image suivante",
     "lightMode": "Passer en mode clair",
     "darkMode": "Passer en mode sombre"
-  },
-  "metadata": {
-    "title": "Maël Aubert — Développeur JavaScript",
-    "description": "Portfolio de Maël Aubert, développeur JavaScript spécialisé React, Next.js & Node.js."
   }
 }

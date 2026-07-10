@@ -2,13 +2,13 @@
   "ekino": {
     "role": "Développeur Frontend Alternant",
     "contractType": "Alternance",
-    "description": "Développement du site ecommerce web Next.js pour d'un grand compte. Développement fullstack d'une application interne d'audit de codebases.",
-    "longDescription": "En tant que développeur frontend alternant chez Ekino, j'ai travaillé sur deux projets majeurs. Le premier est un site e-commerce Next.js en architecture micro-frontends pour un grand compte du retail, où j'ai développé des composants réutilisables, mis en place des tests unitaires avec Jest et optimisé les performances de rendu. Le second projet est une application interne fullstack d'audit automatisé de codebases, permettant d'analyser la qualité du code, les dépendances obsolètes et la conformité aux standards de l'entreprise. J'ai contribué à l'architecture technique, au développement du backend Node.js et à l'interface utilisateur React.",
+    "description": "Participation à la refonte e-commerce micro-frontends de Royal Canin et développement fullstack sur la plateforme open source Vitality.",
+    "longDescription": "En tant que développeur alternant chez Ekino, j'ai travaillé sur deux projets majeurs. Sur Vitality (plateforme open source : https://github.com/ekino/v6y), j'ai assuré le développement et la maintenance fullstack (Next.js, GraphQL, PostgreSQL, Node.js, Express) avec une forte contribution à l'architecture, aux flux d'authentification et aux algorithmes d'analyse de performance. J'ai également participé au projet Royal Canin E-Commerce Revamp, une refonte et migration d'une plateforme legacy vers un écosystème micro-frontend scalable (React.js, TypeScript, TanStack Query, Zustand, Jest, Nx monorepo).",
     "highlights": [
-      "Développement d'un site e-commerce micro-frontends Next.js",
-      "Création d'une app interne d'audit de codebases",
-      "Tests unitaires et d'intégration avec Jest",
-      "Optimisation des performances de rendu côté client"
+      "Développement fullstack sur Vitality (open source, Next.js/Node.js/GraphQL)",
+      "Architecture, flux d'authentification et algorithmes d'analyse de performance",
+      "Refonte micro-frontend e-commerce à grande échelle pour Royal Canin",
+      "Migration d'une stack legacy vers React.js, TanStack Query, Zustand, Nx"
     ]
   },
   "intm": {

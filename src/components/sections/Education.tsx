@@ -18,12 +18,7 @@ export default function Education() {
 
         <div className="flex flex-col gap-6">
           {education.map((edu, i) => {
-            const tr = (
-              ted as Record<
-                string,
-                { title?: string; description?: string; location?: string }
-              >
-            )[edu.id];
+            const tr = ted[edu.id];
             return (
               <motion.div
                 key={edu.id}
@@ -37,25 +32,39 @@ export default function Education() {
                 }}
               >
                 <GlassCard className="p-5 md:p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="font-semibold text-text-primary">
-                        {tr?.title ?? edu.title}
-                      </h3>
-                      <p className="mt-1 text-sm text-text-secondary">
-                        {edu.school}
-                        {(tr?.location ?? edu.location) &&
-                          ` · ${tr?.location ?? edu.location}`}
-                      </p>
+                  <div className="flex items-start gap-4">
+                    {edu.icon && (
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white overflow-hidden p-1.5 shadow-sm">
+                        <img
+                          src={`/images/education/${edu.icon}`}
+                          alt={edu.school}
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
+                    )}
+                    <div className="flex flex-1 flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                      <div>
+                        <h3 className="font-semibold text-text-primary">
+                          {tr?.title ?? edu.title}
+                        </h3>
+                        <p className="mt-1 text-sm text-text-secondary">
+                          {edu.school}
+                          {(tr?.location ?? edu.location) &&
+                            ` · ${tr?.location ?? edu.location}`}
+                        </p>
+                      </div>
+                      <span className="shrink-0 text-xs text-text-secondary/70">
+                        {edu.dateStart} — {edu.dateEnd ?? t.education.now}
+                      </span>
                     </div>
-                    <span className="shrink-0 text-xs text-text-secondary/70">
-                      {edu.dateStart} — {edu.dateEnd ?? t.education.now}
-                    </span>
                   </div>
                   {(tr?.description ?? edu.description) && (
-                    <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                      {tr?.description ?? edu.description}
-                    </p>
+                    <p
+                      className="mt-3 text-sm leading-relaxed text-text-secondary [&>strong]:font-semibold [&>strong]:text-text-primary"
+                      dangerouslySetInnerHTML={{
+                        __html: tr?.description ?? edu.description ?? "",
+                      }}
+                    />
                   )}
                 </GlassCard>
               </motion.div>

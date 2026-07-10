@@ -83,7 +83,7 @@ export default function Projects() {
                 }}
               >
                 {/* Preview image */}
-                <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-pastel-pink/30 via-pastel-purple/20 to-pastel-green/30">
+                <div className="aspect-video w-full overflow-hidden bg-linear-to-br from-pastel-pink/30 via-pastel-purple/20 to-pastel-green/30">
                   {project.images[0] && (
                     <Image
                       src={project.images[0]}
@@ -99,9 +99,8 @@ export default function Projects() {
                     {project.name}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-text-secondary">
-                    {(tp as Record<string, { shortDescription: string }>)[
-                      project.id
-                    ]?.shortDescription ?? project.shortDescription}
+                    {tp[project.id]?.shortDescription ??
+                      project.shortDescription}
                   </p>
                   <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
                     {project.technologies.slice(0, 4).map((tech) => (

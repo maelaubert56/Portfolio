@@ -1,8 +1,8 @@
 export interface Project {
   id: string;
   name: string;
-  shortDescription: string;
-  longDescription: string;
+  shortDescription?: string;
+  longDescription?: string;
   technologies: string[];
   images: string[];
   githubUrl?: string;
@@ -13,14 +13,14 @@ export interface Project {
 
 export interface Experience {
   id: string;
-  role: string;
-  company: string;
+  role?: string;
+  company?: string;
   category: "pro" | "associative";
   contractType?: string;
   dateStart: string;
   dateEnd?: string;
-  description: string;
-  longDescription: string;
+  description?: string;
+  longDescription?: string;
   logo: string;
   location?: string;
   technologies?: string[];
@@ -36,10 +36,11 @@ export interface Technology {
 
 export interface Education {
   id: string;
-  title: string;
-  school: string;
+  title?: string;
+  school?: string;
   dateStart: string;
   dateEnd?: string;
   description?: string;
   location?: string;
+  icon?: string;
 }

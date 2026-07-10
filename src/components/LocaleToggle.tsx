@@ -31,7 +31,7 @@ export default function LocaleToggle() {
       <button
         onClick={() => setOpen((o) => !o)}
         className="flex items-center gap-1.5 rounded-full px-2.5 py-1 text-sm text-text-secondary transition-colors hover:text-text-primary"
-        aria-haspopup="listbox"
+        aria-haspopup="menu"
         aria-expanded={open}
       >
         <span>{current.flag}</span>
@@ -45,7 +45,10 @@ export default function LocaleToggle() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 min-w-[140px] overflow-hidden rounded-xl border border-glass-border bg-glass-bg shadow-lg backdrop-blur-xl">
+        <div
+          role="menu"
+          className="absolute right-0 top-full mt-1 min-w-35 overflow-hidden rounded-xl border border-glass-border bg-glass-bg shadow-lg backdrop-blur-xl"
+        >
           {locales.map((l) => (
             <button
               key={l.value}
@@ -58,8 +61,8 @@ export default function LocaleToggle() {
                   ? "font-medium text-text-primary"
                   : "text-text-secondary"
               }`}
-              role="option"
-              aria-selected={l.value === locale}
+              role="menuitem"
+              aria-current={l.value === locale ? "true" : undefined}
             >
               <span>{l.flag}</span>
               <span>{l.label}</span>

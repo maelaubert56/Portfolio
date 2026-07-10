@@ -18,20 +18,7 @@ export default function ExperienceModal({
   onClose,
 }: ExperienceModalProps) {
   const { t, te } = useI18n();
-  const tr = experience
-    ? (
-        te as Record<
-          string,
-          {
-            role?: string;
-            company?: string;
-            contractType?: string;
-            longDescription?: string;
-            highlights?: string[];
-          }
-        >
-      )[experience.id]
-    : null;
+  const tr = experience ? te[experience.id] : null;
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();

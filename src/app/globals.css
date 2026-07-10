@@ -9,6 +9,7 @@
   --pastel-pink: #f2dede;
   --pastel-green: #dcefe6;
   --pastel-purple: #e9e4f0;
+  --pastel-blue: #d6e8f5;
   --text-primary: #2a2a2a;
   --text-secondary: #6b6b6b;
 }
@@ -18,9 +19,10 @@
   --bg-gradient: linear-gradient(135deg, #0a0a0a, #111111);
   --glass-bg: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.1);
-  --pastel-pink: #3d2626;
-  --pastel-green: #1e3329;
-  --pastel-purple: #2d2837;
+  --pastel-pink: #4a1525;
+  --pastel-green: #0d3821;
+  --pastel-purple: #321c4a;
+  --pastel-blue: #15324d;
   --text-primary: #e8e8e8;
   --text-secondary: #999999;
 }
@@ -32,6 +34,7 @@
   --color-pastel-pink: var(--pastel-pink);
   --color-pastel-green: var(--pastel-green);
   --color-pastel-purple: var(--pastel-purple);
+  --color-pastel-blue: var(--pastel-blue);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --font-sans: var(--font-geist-sans);

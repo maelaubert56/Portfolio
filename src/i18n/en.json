@@ -59,9 +59,5 @@
     "nextImage": "Next image",
     "lightMode": "Switch to light mode",
     "darkMode": "Switch to dark mode"
-  },
-  "metadata": {
-    "title": "Maël Aubert — JavaScript Developer",
-    "description": "Portfolio of Maël Aubert, JavaScript developer specialized in React, Next.js & Node.js."
   }
 }

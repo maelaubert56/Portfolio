@@ -2,13 +2,13 @@
   "ekino": {
     "role": "Frontend Developer (Apprenticeship)",
     "contractType": "Apprenticeship",
-    "description": "Development of a Next.js e-commerce website for a major client. Fullstack development of an internal codebase audit application.",
-    "longDescription": "As a frontend developer apprentice at Ekino, I worked on two major projects. The first is a Next.js e-commerce site in micro-frontends architecture for a major retail client, where I developed reusable components, set up unit tests with Jest and optimized rendering performance. The second project is an internal fullstack application for automated codebase auditing, analyzing code quality, outdated dependencies and compliance with company standards. I contributed to the technical architecture, Node.js backend development and the React user interface.",
+    "description": "Participation in the Royal Canin micro-frontends e-commerce revamp and fullstack development on the open-source platform Vitality.",
+    "longDescription": "As an apprentice developer at Ekino, I worked on two major projects. On Vitality (open-source platform: https://github.com/ekino/v6y), I handled fullstack development and maintenance (Next.js, GraphQL, PostgreSQL, Node.js, Express) with a strong contribution to the architecture, authentication flows, and performance analysis algorithms. I also participated in the Royal Canin E-Commerce Revamp project, a redesign and migration of a legacy platform to a scalable micro-frontend ecosystem (React.js, TypeScript, TanStack Query, Zustand, Jest, Nx monorepo).",
     "highlights": [
-      "Development of a micro-frontends Next.js e-commerce site",
-      "Creation of an internal codebase audit app",
-      "Unit and integration testing with Jest",
-      "Client-side rendering performance optimization"
+      "Fullstack development on Vitality (open source, Next.js/Node.js/GraphQL)",
+      "Architecture, authentication flows, and performance analysis algorithms",
+      "Large-scale e-commerce micro-frontend revamp for Royal Canin",
+      "Migration of a legacy stack to React.js, TanStack Query, Zustand, Nx"
     ]
   },
   "intm": {

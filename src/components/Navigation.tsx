@@ -7,8 +7,17 @@ import ThemeToggle from "@/components/ThemeToggle";
 import LocaleToggle from "@/components/LocaleToggle";
 import { useI18n } from "@/i18n/provider";
 
+const sectionHrefs = [
+  "#projects",
+  "#experience",
+  "#technologies",
+  "#about",
+  "#contact",
+];
+
 export default function Navigation() {
   const { t } = useI18n();
+
   const links = [
     { href: "#projects", label: t.nav.projects },
     { href: "#experience", label: t.nav.experience },
@@ -28,8 +37,8 @@ export default function Navigation() {
   }, []);
 
   useEffect(() => {
-    const sections = links.map((l) =>
-      document.querySelector<HTMLElement>(l.href),
+    const sections = sectionHrefs.map((href) =>
+      document.querySelector<HTMLElement>(href),
     );
 
     const observer = new IntersectionObserver(

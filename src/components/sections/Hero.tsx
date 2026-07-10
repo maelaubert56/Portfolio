@@ -67,10 +67,10 @@ export default function Hero() {
             <Image
               src="/avatar.png"
               alt="Maël Aubert"
-              width={1200}
-              height={140}
+              width={180}
+              height={180}
               priority
-              className="h-[90px] w-[90px] rounded-3xl object-cover shadow-lg ring-3 ring-white/30 md:h-[180px] md:w-[180px]"
+              className="h-22.5 w-22.5 rounded-3xl object-cover shadow-lg ring-3 ring-white/30 md:h-45 md:w-45"
             />
           </motion.div>
 
@@ -114,7 +114,7 @@ export default function Hero() {
               </motion.a>
 
               <motion.a
-                href="/cv-mael-aubert.pdf"
+                href="/CV_Mael-AUBERT.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-full border border-glass-border px-6 py-3 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary hover:border-text-secondary/30"
                 initial={{ opacity: 0, y: 15 }}

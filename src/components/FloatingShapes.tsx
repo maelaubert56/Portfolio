@@ -12,12 +12,12 @@ import { type CSSProperties, type ReactNode } from "react";
 /* ---- 3D Cube component ---- */
 function Cube({
   size,
-  color,
+  colorClass,
   className,
   style,
 }: {
   size: number;
-  color: string;
+  colorClass: string;
   className?: string;
   style?: CSSProperties;
 }) {
@@ -34,8 +34,8 @@ function Cube({
         {["front", "back", "left", "right", "top", "bottom"].map((face) => (
           <div
             key={face}
-            className={`face face-${face}`}
-            style={{ background: color, width: s, height: s }}
+            className={`face face-${face} ${colorClass}`}
+            style={{ width: s, height: s }}
           />
         ))}
       </div>
@@ -64,7 +64,7 @@ interface FloatingShape {
 const shapes: FloatingShape[] = [
   // ---- Hero area ----
   {
-    element: <Cube size={90} color="rgba(242,222,222,0.85)" />,
+    element: <Cube size={90} colorClass="bg-pastel-pink/85" />,
     position: { top: "8%", left: "8%" },
     parallaxFactor: -0.15,
     velocitySensitivity: 0.25,
@@ -74,9 +74,7 @@ const shapes: FloatingShape[] = [
     springDamping: 6,
   },
   {
-    element: (
-      <div className="geo-diamond h-[110px] w-[110px] bg-pastel-purple/70" />
-    ),
+    element: <div className="geo-diamond h-27.5 w-27.5 bg-pastel-purple/70" />,
     position: { top: "14%", right: "10%" },
     parallaxFactor: -0.1,
     velocitySensitivity: 0.35,
@@ -86,12 +84,7 @@ const shapes: FloatingShape[] = [
     springDamping: 7,
   },
   {
-    element: (
-      <div
-        className="geo-ring h-[140px] w-[140px]"
-        style={{ borderColor: "rgba(220,239,230,0.85)" }}
-      />
-    ),
+    element: <div className="geo-ring h-35 w-35 border-pastel-green/85" />,
     position: { top: "22%", left: "35%" },
     parallaxFactor: -0.22,
     velocitySensitivity: 0.18,
@@ -103,8 +96,8 @@ const shapes: FloatingShape[] = [
 
   // ---- Projects area ----
   {
-    element: <Cube size={70} color="rgba(220,239,230,0.8)" />,
-    position: { top: "750px", right: "6%" },
+    element: <Cube size={70} colorClass="bg-pastel-green/80" />,
+    position: { top: "17%", right: "6%" },
     parallaxFactor: -0.12,
     velocitySensitivity: 0.3,
     direction: -1,
@@ -113,8 +106,8 @@ const shapes: FloatingShape[] = [
     springDamping: 5,
   },
   {
-    element: <div className="geo-hex h-[120px] w-[120px] bg-pastel-pink/70" />,
-    position: { top: "850px", left: "3%" },
+    element: <div className="geo-hex h-30 w-30 bg-pastel-pink/70" />,
+    position: { top: "19%", left: "3%" },
     parallaxFactor: -0.18,
     velocitySensitivity: 0.22,
     direction: 1,
@@ -123,10 +116,8 @@ const shapes: FloatingShape[] = [
     springDamping: 4,
   },
   {
-    element: (
-      <div className="geo-dots h-[160px] w-[160px] text-pastel-purple/50" />
-    ),
-    position: { top: "1000px", right: "20%" },
+    element: <div className="geo-dots h-40 w-40 text-pastel-purple/50" />,
+    position: { top: "23%", right: "20%" },
     parallaxFactor: -0.08,
     velocitySensitivity: 0.4,
     direction: -1,
@@ -137,8 +128,8 @@ const shapes: FloatingShape[] = [
 
   // ---- Experience area ----
   {
-    element: <Cube size={100} color="rgba(233,228,240,0.75)" />,
-    position: { top: "1550px", left: "2%" },
+    element: <Cube size={100} colorClass="bg-pastel-purple/75" />,
+    position: { top: "35%", left: "2%" },
     parallaxFactor: -0.16,
     velocitySensitivity: 0.28,
     direction: 1,
@@ -147,13 +138,8 @@ const shapes: FloatingShape[] = [
     springDamping: 5,
   },
   {
-    element: (
-      <div
-        className="geo-ring h-[180px] w-[180px]"
-        style={{ borderColor: "rgba(242,222,222,0.8)", borderWidth: "4px" }}
-      />
-    ),
-    position: { top: "1750px", right: "4%" },
+    element: <div className="geo-ring h-45 w-45 border-4 border-pastel-pink/80" />,
+    position: { top: "39%", right: "4%" },
     parallaxFactor: -0.1,
     velocitySensitivity: 0.2,
     direction: -1,
@@ -162,10 +148,8 @@ const shapes: FloatingShape[] = [
     springDamping: 3,
   },
   {
-    element: (
-      <div className="geo-diamond h-[80px] w-[80px] bg-pastel-green/65" />
-    ),
-    position: { top: "1900px", left: "25%" },
+    element: <div className="geo-diamond h-20 w-20 bg-pastel-green/65" />,
+    position: { top: "42%", left: "25%" },
     parallaxFactor: -0.2,
     velocitySensitivity: 0.35,
     direction: 1,
@@ -176,8 +160,8 @@ const shapes: FloatingShape[] = [
 
   // ---- Technologies area ----
   {
-    element: <Cube size={65} color="rgba(220,239,230,0.75)" />,
-    position: { top: "2500px", right: "8%" },
+    element: <Cube size={65} colorClass="bg-pastel-green/75" />,
+    position: { top: "56%", right: "8%" },
     parallaxFactor: -0.14,
     velocitySensitivity: 0.25,
     direction: -1,
@@ -186,10 +170,8 @@ const shapes: FloatingShape[] = [
     springDamping: 5,
   },
   {
-    element: (
-      <div className="geo-cross h-[100px] w-[100px] bg-pastel-pink/60" />
-    ),
-    position: { top: "2600px", left: "5%" },
+    element: <div className="geo-cross h-25 w-25 bg-pastel-pink/60" />,
+    position: { top: "58%", left: "5%" },
     parallaxFactor: -0.18,
     velocitySensitivity: 0.32,
     direction: 1,
@@ -198,8 +180,8 @@ const shapes: FloatingShape[] = [
     springDamping: 4,
   },
   {
-    element: <div className="geo-hex h-[90px] w-[90px] bg-pastel-purple/60" />,
-    position: { top: "2750px", right: "25%" },
+    element: <div className="geo-hex h-22.5 w-22.5 bg-pastel-purple/60" />,
+    position: { top: "61%", right: "25%" },
     parallaxFactor: -0.08,
     velocitySensitivity: 0.4,
     direction: -1,
@@ -210,8 +192,8 @@ const shapes: FloatingShape[] = [
 
   // ---- Education / About / Contact area ----
   {
-    element: <Cube size={80} color="rgba(242,222,222,0.7)" />,
-    position: { top: "3300px", right: "5%" },
+    element: <Cube size={80} colorClass="bg-pastel-pink/70" />,
+    position: { top: "73%", right: "5%" },
     parallaxFactor: -0.12,
     velocitySensitivity: 0.3,
     direction: 1,
@@ -220,13 +202,8 @@ const shapes: FloatingShape[] = [
     springDamping: 4,
   },
   {
-    element: (
-      <div
-        className="geo-ring h-[150px] w-[150px]"
-        style={{ borderColor: "rgba(233,228,240,0.8)", borderWidth: "3px" }}
-      />
-    ),
-    position: { top: "3500px", left: "6%" },
+    element: <div className="geo-ring h-37.5 w-37.5 border-[3px] border-pastel-purple/80" />,
+    position: { top: "78%", left: "6%" },
     parallaxFactor: -0.16,
     velocitySensitivity: 0.22,
     direction: -1,
@@ -235,10 +212,8 @@ const shapes: FloatingShape[] = [
     springDamping: 3,
   },
   {
-    element: (
-      <div className="geo-dots h-[140px] w-[140px] text-pastel-green/45" />
-    ),
-    position: { top: "3800px", right: "15%" },
+    element: <div className="geo-dots h-35 w-35 text-pastel-green/45" />,
+    position: { top: "84%", right: "15%" },
     parallaxFactor: -0.1,
     velocitySensitivity: 0.35,
     direction: 1,
@@ -247,10 +222,8 @@ const shapes: FloatingShape[] = [
     springDamping: 6,
   },
   {
-    element: (
-      <div className="geo-diamond h-[70px] w-[70px] bg-pastel-purple/60" />
-    ),
-    position: { top: "4100px", left: "20%" },
+    element: <div className="geo-diamond h-17.5 w-17.5 bg-pastel-purple/60" />,
+    position: { top: "91%", left: "20%" },
     parallaxFactor: -0.22,
     velocitySensitivity: 0.18,
     direction: -1,

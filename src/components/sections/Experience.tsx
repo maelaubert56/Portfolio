@@ -8,7 +8,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import ExperienceModal from "@/components/ExperienceModal";
 import { experiences } from "@/data/experiences";
 import type { Experience as ExperienceType } from "@/types";
-import { useI18n } from "@/i18n/provider";
+import { useI18n, type ExperienceTranslations } from "@/i18n/provider";
 
 function Timeline({
   items,
@@ -18,20 +18,12 @@ function Timeline({
 }: {
   items: ExperienceType[];
   onSelect: (exp: ExperienceType) => void;
-  te: Record<
-    string,
-    {
-      role?: string;
-      company?: string;
-      description?: string;
-      contractType?: string;
-    }
-  >;
+  te: ExperienceTranslations;
   now: string;
 }) {
   return (
     <div className="relative">
-      <div className="absolute left-4 top-0 bottom-0 w-px bg-glass-border md:left-1/2 md:-translate-x-px" />
+      <div className="absolute left-4 top-9 bottom-0 w-px bg-black/15 dark:bg-glass-border md:left-1/2 md:-translate-x-px" />
 
       {items.map((exp, i) => (
         <motion.div
@@ -51,12 +43,14 @@ function Timeline({
           }`}
         >
           <div
-            className={`absolute top-2 h-3 w-3 rounded-full border-2 border-bg-main bg-text-secondary/40 left-[10px] ${
+            className={`absolute top-9 flex h-3 w-3 items-center justify-center rounded-full border-2 border-bg-main bg-bg-main left-2.5 ${
               i % 2 === 0
-                ? "md:left-auto md:right-[-6.5px]"
+                ? "md:left-auto md:right-[-5.5px]"
                 : "md:left-[-6.5px]"
             }`}
-          />
+          >
+            <div className="h-full w-full rounded-full bg-text-secondary/40" />
+          </div>
 
           <GlassCard
             className="cursor-pointer p-5 md:p-6"
@@ -147,7 +141,6 @@ export default function Experience() {
         <h2 className="mb-4 text-2xl font-bold tracking-tight text-text-primary md:text-3xl">
           {t.experience.title}
         </h2>
-        <p className="mb-12 text-text-secondary">{t.experience.subtitle}</p>
 
         <h3 className="mb-8 text-sm font-semibold uppercase tracking-wider text-text-secondary">
           {t.experience.pro}

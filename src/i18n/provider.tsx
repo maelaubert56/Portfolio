@@ -21,9 +21,29 @@ import enEducation from "@/i18n/en.education.json";
 export type Locale = "fr" | "en";
 
 type Translations = typeof fr;
-type ProjectTranslations = typeof frProjects;
-type ExperienceTranslations = typeof frExperiences;
-type EducationTranslations = typeof frEducation;
+
+export interface ProjectTranslation {
+  shortDescription: string;
+  longDescription: string;
+}
+export type ProjectTranslations = Record<string, ProjectTranslation>;
+
+export interface ExperienceTranslation {
+  role?: string;
+  company?: string;
+  description?: string;
+  contractType?: string;
+  longDescription?: string;
+  highlights?: string[];
+}
+export type ExperienceTranslations = Record<string, ExperienceTranslation>;
+
+export interface EducationTranslation {
+  title?: string;
+  description?: string;
+  location?: string;
+}
+export type EducationTranslations = Record<string, EducationTranslation>;
 
 const translations: Record<Locale, Translations> = { fr, en };
 const projectTranslations: Record<Locale, ProjectTranslations> = {
