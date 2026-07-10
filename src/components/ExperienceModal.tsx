@@ -70,14 +70,14 @@ export default function ExperienceModal({
                   {experience.logo ? (
                     <Image
                       src={experience.logo}
-                      alt={experience.company}
+                      alt={experience.company || ""}
                       width={56}
                       height={56}
                       className="h-full w-full object-cover"
                     />
                   ) : (
                     <span className="text-lg font-bold text-text-secondary">
-                      {experience.company.charAt(0)}
+                      {experience.company?.charAt(0)}
                     </span>
                   )}
                 </div>
