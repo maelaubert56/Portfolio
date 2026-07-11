@@ -65,7 +65,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/avatar.png"
+              src="/avatar.webp"
               alt="Maël Aubert"
               width={180}
               height={180}
