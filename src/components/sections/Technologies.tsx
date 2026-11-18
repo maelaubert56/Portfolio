@@ -21,6 +21,9 @@ import {
   SiDocker,
   SiGithubactions,
   SiGithubcopilot,
+  SiClaude,
+  SiOpenai,
+  SiPostman,
   SiFigma,
   SiJest,
 } from "react-icons/si";
@@ -47,6 +50,9 @@ const techIcons: Record<string, ComponentType<{ className?: string }>> = {
   Azure: VscAzure,
   "GitHub Actions": SiGithubactions,
   "GitHub Copilot": SiGithubcopilot,
+  Claude: SiClaude,
+  Codex: SiOpenai,
+  Postman: SiPostman,
   Figma: SiFigma,
   Jest: SiJest,
 };

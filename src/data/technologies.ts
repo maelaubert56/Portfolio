@@ -24,6 +24,9 @@ export const technologies: Technology[] = [
   { name: "Azure", category: "tools" },
   { name: "GitHub Actions", category: "tools" },
   { name: "GitHub Copilot", category: "tools" },
+  { name: "Claude", category: "tools" },
+  { name: "Codex", category: "tools" },
+  { name: "Postman", category: "tools" },
   { name: "Figma", category: "tools" },
   { name: "Jest", category: "tools" },
 ];

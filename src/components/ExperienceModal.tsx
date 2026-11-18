@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
+import ExperienceProjects from "@/components/ExperienceProjects";
 import type { Experience } from "@/types";
 import { useI18n } from "@/i18n/provider";
 
@@ -59,21 +60,22 @@ export default function ExperienceModal({
           <GlassCard
             hover={false}
             layoutId={`experience-${experience.id}`}
-            className="relative z-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto p-6 md:p-8"
+            className="relative z-10 w-full max-w-2xl max-h-[85vh] p-6 md:p-8"
+            style={{ overflowY: "auto" }}
             role="dialog"
             aria-modal="true"
-            aria-label={experience.role}
+            aria-label={tr?.role ?? experience.role}
           >
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-pastel-green/50 overflow-hidden">
+                <div className={`flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl ${experience.logoBackground === "neutral" ? "bg-neutral-200" : "bg-pastel-green/50"}`}>
                   {experience.logo ? (
                     <Image
                       src={experience.logo}
-                      alt={experience.company || ""}
+                      alt=""
                       width={56}
                       height={56}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   ) : (
                     <span className="text-lg font-bold text-text-secondary">
@@ -109,9 +111,19 @@ export default function ExperienceModal({
               </button>
             </div>
 
-            <p className="mt-6 text-sm leading-relaxed text-text-secondary md:text-base">
-              {tr?.longDescription ?? experience.longDescription}
-            </p>
+            {(tr?.longDescription ?? experience.longDescription) && (
+              <p className="mt-6 text-sm leading-relaxed text-text-secondary md:text-base">
+                {tr?.longDescription ?? experience.longDescription}
+              </p>
+            )}
+
+            {experience.projects && tr?.projects && (
+              <ExperienceProjects
+                projects={experience.projects}
+                translations={tr.projects}
+                detailed
+              />
+            )}
 
             {(tr?.highlights ?? experience.highlights) &&
               (tr?.highlights ?? experience.highlights)!.length > 0 && (

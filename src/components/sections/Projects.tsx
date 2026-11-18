@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import CardDetailsLabel from "@/components/ui/CardDetailsLabel";
 import GlassCard from "@/components/ui/GlassCard";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import dynamic from "next/dynamic";
@@ -72,8 +73,17 @@ export default function Projects() {
               <GlassCard
                 key={project.id}
                 layoutId={`project-${project.id}`}
-                className="flex cursor-pointer flex-col overflow-hidden p-0"
+                className="group flex cursor-pointer flex-col overflow-hidden p-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-text-secondary"
+                role="button"
+                tabIndex={0}
+                aria-haspopup="dialog"
                 onClick={() => setSelectedProject(project)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setSelectedProject(project);
+                  }
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
@@ -112,6 +122,9 @@ export default function Projects() {
                         {tech}
                       </span>
                     ))}
+                  </div>
+                  <div>
+                    <CardDetailsLabel />
                   </div>
                 </div>
               </GlassCard>

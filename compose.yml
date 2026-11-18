@@ -8,3 +8,4 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=${PORT:-3000}
+      - OPEN_TO_WORK=${OPEN_TO_WORK:-false}

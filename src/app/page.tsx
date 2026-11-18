@@ -1,3 +1,4 @@
+import { connection } from "next/server";
 import Navigation from "@/components/Navigation";
 import ScrollProgress from "@/components/ScrollProgress";
 import FloatingShapes from "@/components/FloatingShapes";
@@ -11,7 +12,10 @@ import Contact from "@/components/sections/Contact";
 import PhysicsBalls from "@/components/PhysicsBalls";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default async function Home() {
+  await connection();
+  const openToWork = process.env.OPEN_TO_WORK === "true";
+
   return (
     <>
       <ScrollProgress />
@@ -23,12 +27,13 @@ export default function Home() {
 
         <main className="relative z-10">
           <Hero />
+          <Experience category="pro" />
           <Projects />
-          <Experience />
+          <Experience category="associative" />
           <Technologies />
           <Education />
           <About />
-          <Contact />
+          <Contact openToWork={openToWork} />
         </main>
 
         <Footer />

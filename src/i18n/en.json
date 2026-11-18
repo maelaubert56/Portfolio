@@ -7,8 +7,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "JavaScript Developer",
-    "description": "I build modern, performant and polished web experiences with React, Next.js and TypeScript.",
+    "subtitle": "Full-Stack JavaScript Developer",
+    "description": "I build web applications and APIs with TypeScript, React, Next.js and Node.js.",
     "cta": "View my projects",
     "cv": "Download my CV"
   },
@@ -19,7 +19,6 @@
     "viewSite": "View site"
   },
   "experience": {
-    "title": "Experience",
     "subtitle": "My professional journey.",
     "pro": "Professional experience",
     "associative": "Extracurricular experience",
@@ -37,21 +36,23 @@
   },
   "about": {
     "title": "About",
-    "p1": "Passionate about web development for several years, I specialize in the JavaScript ecosystem with a focus on <strong>React</strong>, <strong>Next.js</strong> and <strong>TypeScript</strong>.",
+    "p1": "I build web applications from the user interface to the API, using <strong>React</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong> and <strong>Node.js</strong>.",
     "p2": "I place great importance on <strong>code quality</strong>, <strong>user experience</strong> and <strong>design</strong>. Every project is an opportunity to create something beautiful, performant and maintainable.",
-    "p3": "Currently a developer at <strong>Ekino</strong>, I work on complex web applications for major clients, while continuing to explore the latest technologies on my own.",
+    "p3": "I’m a junior backend engineer at <strong>Ekino</strong>, where I work on the <strong>CANAL+</strong> API gateway for TV, mobile and web apps.",
     "quote": "\"Simple but mastered\" — that's my philosophy, in code as in design."
   },
   "contact": {
     "title": "Contact",
     "subtitle": "Have a project in mind? Don't hesitate to reach out.",
-    "description": "I'm available for freelance work or full-time opportunities. Contact me by email or find me on social media."
+    "description": "I'm available for freelance work or full-time opportunities. Contact me by email or find me on social media.",
+    "neutralDescription": "Contact me by email or find me on social media."
   },
   "footer": {
     "rights": "All rights reserved.",
     "source": "Source code"
   },
   "a11y": {
+    "viewDetails": "View details",
     "close": "Close",
     "closeMenu": "Close menu",
     "openMenu": "Open menu",

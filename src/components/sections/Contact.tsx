@@ -25,7 +25,7 @@ const socials = [
   },
 ];
 
-export default function Contact() {
+export default function Contact({ openToWork }: { openToWork: boolean }) {
   const { t } = useI18n();
   return (
     <SectionWrapper id="contact">
@@ -33,12 +33,14 @@ export default function Contact() {
         <h2 className="mb-4 text-2xl font-bold tracking-tight text-text-primary md:text-3xl">
           {t.contact.title}
         </h2>
-        <p className="mb-8 text-text-secondary">{t.contact.subtitle}</p>
+        {openToWork && (
+          <p className="mb-8 text-text-secondary">{t.contact.subtitle}</p>
+        )}
 
         <GlassCard hover={false} className="p-8">
           <div className="flex flex-col items-center gap-6">
             <p className="text-sm leading-relaxed text-text-secondary">
-              {t.contact.description}
+              {openToWork ? t.contact.description : t.contact.neutralDescription}
             </p>
 
             <div className="flex gap-4">

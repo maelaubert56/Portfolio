@@ -54,7 +54,7 @@ export default function Hero() {
         >
           {/* Avatar — top right, half outside the card */}
           <motion.div
-            className="absolute -top-10 left-1/2 z-20 -translate-x-1/2 md:translate-x-0 md:left-auto md:-top-14 md:right-10"
+            className="absolute -top-10 left-1/2 z-20 -translate-x-1/2 md:translate-x-0 md:left-auto md:-top-20 md:right-10"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{

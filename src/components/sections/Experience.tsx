@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ExperienceProjects from "@/components/ExperienceProjects";
+import CardDetailsLabel from "@/components/ui/CardDetailsLabel";
 import GlassCard from "@/components/ui/GlassCard";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import dynamic from "next/dynamic";
@@ -24,7 +26,7 @@ function Timeline({
 }) {
   return (
     <div className="relative">
-      <div className="absolute left-4 top-9 bottom-0 w-px bg-black/15 dark:bg-glass-border md:left-1/2 md:-translate-x-px" />
+      <div className="absolute left-4 top-9 bottom-0 w-px bg-text-secondary/40 [.dark_&]:bg-glass-border md:left-1/2 md:-translate-x-px" />
 
       {items.map((exp, i) => (
         <motion.div
@@ -54,9 +56,18 @@ function Timeline({
           </div>
 
           <GlassCard
-            className="cursor-pointer p-5 md:p-6"
+            className="group cursor-pointer p-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-text-secondary md:p-6"
             layoutId={`experience-${exp.id}`}
+            role="button"
+            tabIndex={0}
+            aria-haspopup="dialog"
             onClick={() => onSelect(exp)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                onSelect(exp);
+              }
+            }}
             hover
           >
             <div
@@ -64,14 +75,14 @@ function Timeline({
                 i % 2 === 0 ? "md:flex-row-reverse" : ""
               }`}
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-pastel-green/50 overflow-hidden">
+              <div className={`flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl ${exp.logoBackground === "neutral" ? "bg-neutral-200" : "bg-pastel-green/50"}`}>
                 {exp.logo ? (
                   <Image
                     src={exp.logo}
-                    alt={exp.company || ""}
+                    alt=""
                     width={40}
                     height={40}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 ) : (
                   <span className="text-xs font-bold text-text-secondary">
@@ -99,9 +110,18 @@ function Timeline({
               )}
             </p>
 
-            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-              {te[exp.id]?.description ?? exp.description}
-            </p>
+            {(te[exp.id]?.description ?? exp.description) && (
+              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+                {te[exp.id]?.description ?? exp.description}
+              </p>
+            )}
+
+            {exp.projects && (
+              <ExperienceProjects
+                projects={exp.projects}
+                translations={te[exp.id]?.projects}
+              />
+            )}
 
             {exp.technologies && (
               <div
@@ -119,6 +139,8 @@ function Timeline({
                 ))}
               </div>
             )}
+
+            <CardDetailsLabel />
           </GlassCard>
         </motion.div>
       ))}
@@ -126,38 +148,23 @@ function Timeline({
   );
 }
 
-export default function Experience() {
+export default function Experience({ category }: { category: ExperienceType["category"] }) {
   const { t, te } = useI18n();
   const [selectedExperience, setSelectedExperience] =
     useState<ExperienceType | null>(null);
 
-  const proExperiences = experiences.filter((e) => e.category === "pro");
-  const assoExperiences = experiences.filter(
-    (e) => e.category === "associative",
-  );
+  const items = experiences.filter((experience) => experience.category === category);
+  const isProfessional = category === "pro";
 
   return (
-    <SectionWrapper id="experience">
+    <SectionWrapper id={isProfessional ? "experience" : "associations"}>
       <div className="relative z-10 mx-auto max-w-4xl">
         <h2 className="mb-4 text-2xl font-bold tracking-tight text-text-primary md:text-3xl">
-          {t.experience.title}
+          {isProfessional ? t.experience.pro : t.experience.associative}
         </h2>
 
-        <h3 className="mb-8 text-sm font-semibold uppercase tracking-wider text-text-secondary">
-          {t.experience.pro}
-        </h3>
         <Timeline
-          items={proExperiences}
-          onSelect={setSelectedExperience}
-          te={te}
-          now={t.experience.now}
-        />
-
-        <h3 className="mb-8 mt-16 text-sm font-semibold uppercase tracking-wider text-text-secondary">
-          {t.experience.associative}
-        </h3>
-        <Timeline
-          items={assoExperiences}
+          items={items}
           onSelect={setSelectedExperience}
           te={te}
           now={t.experience.now}

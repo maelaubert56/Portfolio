@@ -14,15 +14,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Maël Aubert — Développeur fullstack JavaScript";
+const description =
+  "Portfolio de Maël Aubert, Développeur fullstack JavaScript et ingénieur backend junior chez Ekino sur le projet CANAL+.";
+
 export const metadata: Metadata = {
-  title: "Maël Aubert — Développeur JavaScript",
-  description:
-    "Portfolio de Maël Aubert, développeur JavaScript spécialisé React, Next.js & Node.js.",
+  title,
+  description,
   metadataBase: new URL("https://maelaubert.fr"),
   openGraph: {
-    title: "Maël Aubert — Développeur JavaScript",
-    description:
-      "Portfolio de Maël Aubert, développeur JavaScript spécialisé React, Next.js & Node.js.",
+    title,
+    description,
     url: "https://maelaubert.fr",
     siteName: "Maël Aubert",
     locale: "fr_FR",
@@ -32,15 +34,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Maël Aubert — Développeur JavaScript",
+        alt: `${title}. Ingénieur backend junior chez Ekino sur le projet CANAL+.`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maël Aubert — Développeur JavaScript",
-    description:
-      "Portfolio de Maël Aubert, développeur JavaScript spécialisé React, Next.js & Node.js.",
+    title,
+    description,
     images: ["/og-image.png"],
   },
   icons: {

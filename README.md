@@ -34,3 +34,9 @@
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" style="margin: 10px;"/>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" style="margin: 10px;"/>
 </p>
+
+## Contact availability
+
+Set `OPEN_TO_WORK=true` in the root `.env` to show the availability message for freelance work and permanent roles. The default, `OPEN_TO_WORK=false`, shows a general invitation to get in touch.
+
+Restart the local server after editing `.env`. On the server, run `docker compose up -d` from the directory containing `compose.yml` and its `.env` to apply the setting without rebuilding the image.

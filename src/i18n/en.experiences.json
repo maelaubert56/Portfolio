@@ -1,15 +1,34 @@
 {
+  "ekino-canal-plus": {
+    "role": "Junior Backend Engineer",
+    "contractType": "Permanent",
+    "projects": {
+      "CANAL+": {
+        "description": "I develop an API gateway that connects CANAL+ backend services to its apps across set-top boxes, smart TVs, mobile devices and the web.",
+        "longDescription": "After my apprenticeship, I stayed at Ekino in a permanent role and joined the CANAL+ project in September 2026. I develop the API gateway that gives the group’s apps access to backend services across set-top boxes, smart TVs, mobile devices and the web."
+      }
+    }
+  },
   "ekino": {
-    "role": "Frontend Developer (Apprenticeship)",
+    "role": "Full-Stack JavaScript Developer",
     "contractType": "Apprenticeship",
-    "description": "Participation in the Royal Canin micro-frontends e-commerce revamp and fullstack development on the open-source platform Vitality.",
-    "longDescription": "As an apprentice developer at Ekino, I worked on two major projects. On Vitality (open-source platform: https://github.com/ekino/v6y), I handled fullstack development and maintenance (Next.js, GraphQL, PostgreSQL, Node.js, Express) with a strong contribution to the architecture, authentication flows, and performance analysis algorithms. I also participated in the Royal Canin E-Commerce Revamp project, a redesign and migration of a legacy platform to a scalable micro-frontend ecosystem (React.js, TypeScript, TanStack Query, Zustand, Jest, Nx monorepo).",
-    "highlights": [
-      "Fullstack development on Vitality (open source, Next.js/Node.js/GraphQL)",
-      "Architecture, authentication flows, and performance analysis algorithms",
-      "Large-scale e-commerce micro-frontend revamp for Royal Canin",
-      "Migration of a legacy stack to React.js, TanStack Query, Zustand, Nx"
-    ]
+    "projects": {
+      "Royal Canin": {
+        "description": "A revamp of Royal Canin’s e-commerce platform. I spent 18 months helping migrate it to a micro-frontend architecture.",
+        "highlights": [
+          "Built features with React, TypeScript, TanStack Query and Zustand in an Nx monorepo.",
+          "Tested features and mocked API responses using Jest, React Testing Library and MSW.",
+          "Used GitHub Copilot and MCP tools for development, testing and exploring architecture options."
+        ]
+      },
+      "Vitality": {
+        "description": "Ekino’s open-source platform audits applications and brings the results together so teams can track code quality and performance. I contributed for six months.",
+        "highlights": [
+          "Built full-stack features with Next.js, Node.js, Express, GraphQL and PostgreSQL.",
+          "Contributed to the architecture, Passport.js authentication flows and performance analysis algorithms."
+        ]
+      }
+    }
   },
   "intm": {
     "role": "Business Manager",

@@ -3,21 +3,32 @@ import { Experience } from "@/types";
 export const experiences: Experience[] = [
   // --- Expériences professionnelles ---
   {
+    id: "ekino-canal-plus",
+    company: "Ekino",
+    category: "pro",
+    dateStart: "2026-09",
+    logo: "/images/logos/ekino.webp",
+    location: "Paris, France",
+    projects: [
+      { name: "CANAL+", logo: "/images/logos/canal-plus.webp", monochrome: true },
+    ],
+  },
+  {
     id: "ekino",
     company: "Ekino",
     category: "pro",
     dateStart: "2024-09",
+    dateEnd: "2026-08",
     logo: "/images/logos/ekino.webp",
     location: "Paris, France",
-    technologies: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "GraphQL",
-      "PostgreSQL",
-      "Nx Monorepo",
-      "Micro-Frontends",
+    projects: [
+      { name: "Royal Canin", logo: "/images/logos/royal-canin.webp" },
+      {
+        name: "Vitality",
+        logo: "/images/logos/vitality.svg",
+        monochrome: true,
+        url: "https://github.com/ekino/v6y",
+      },
     ],
   },
   {
@@ -53,6 +64,7 @@ export const experiences: Experience[] = [
     category: "associative",
     dateStart: "2023-05",
     logo: "/images/logos/bds-efrei.webp",
+    logoBackground: "neutral",
     location: "Villejuif, France",
     technologies: ["React", "Node.js", "Web Scraping", "Partenariats"],
   },

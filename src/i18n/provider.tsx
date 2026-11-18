@@ -35,6 +35,11 @@ export interface ExperienceTranslation {
   contractType?: string;
   longDescription?: string;
   highlights?: string[];
+  projects?: Record<string, {
+    description: string;
+    longDescription?: string;
+    highlights?: string[];
+  }>;
 }
 export type ExperienceTranslations = Record<string, ExperienceTranslation>;
 

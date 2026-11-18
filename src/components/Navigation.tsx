@@ -8,8 +8,8 @@ import LocaleToggle from "@/components/LocaleToggle";
 import { useI18n } from "@/i18n/provider";
 
 const sectionHrefs = [
-  "#projects",
   "#experience",
+  "#projects",
   "#technologies",
   "#about",
   "#contact",
@@ -19,8 +19,8 @@ export default function Navigation() {
   const { t } = useI18n();
 
   const links = [
-    { href: "#projects", label: t.nav.projects },
     { href: "#experience", label: t.nav.experience },
+    { href: "#projects", label: t.nav.projects },
     { href: "#technologies", label: t.nav.technologies },
     { href: "#about", label: t.nav.about },
     { href: "#contact", label: t.nav.contact },

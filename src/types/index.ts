@@ -22,9 +22,11 @@ export interface Experience {
   description?: string;
   longDescription?: string;
   logo: string;
+  logoBackground?: "neutral";
   location?: string;
   technologies?: string[];
   highlights?: string[];
+  projects?: { name: string; logo: string; monochrome?: boolean; url?: string }[];
 }
 
 export interface Technology {
